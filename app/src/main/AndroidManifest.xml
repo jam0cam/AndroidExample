@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jitse.example" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name=".ExampleApplication"
+        >
+        <activity
+            android:name=".MyActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity android:name=".RatioActivity" >
+        </activity>
+
+        <service
+            android:name=".service.MyService"
+            android:label="MyService" >
+        </service>
+
+        <activity
+            android:name=".FrameLayoutActivity"
+            android:label="@string/title_activity_frame_layout" >
+        </activity>
+        <activity
+            android:name=".DialogFragmentActivity"
+            android:label="@string/title_activity_dialog_fragment" >
+        </activity>
+        <activity
+            android:name=".NotificationActivity"
+            android:label="@string/title_activity_notification" >
+        </activity>
+        <activity
+            android:name=".NotificationResultActivity"
+            android:label="@string/title_activity_notification_result" >
+        </activity>
+        <activity
+            android:name=".BarcodeActivity"
+            android:label="@string/title_activity_barcode" >
+        </activity>
+        <activity
+            android:name=".CircularActivity"
+            android:label="@string/title_activity_circular" >
+        </activity>
+        <activity
+            android:name=".RecyclerViewActivity"
+            android:label="@string/title_activity_cards" >
+
+        </activity>
+        <activity
+            android:name=".RetrofitActivity"
+            android:label="@string/title_activity_retrofit" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
