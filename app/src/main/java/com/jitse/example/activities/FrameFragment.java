@@ -1,4 +1,4 @@
-package com.jitse.example;
+package com.jitse.example.activities;
 
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
+
+import com.jitse.example.R;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;

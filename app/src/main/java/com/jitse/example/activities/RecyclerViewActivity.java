@@ -1,10 +1,12 @@
-package com.jitse.example;
+package com.jitse.example.activities;
 
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
+import com.jitse.example.R;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;

@@ -1,4 +1,4 @@
-package com.jitse.example;
+package com.jitse.example.activities;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -10,6 +10,7 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.jitse.example.R;
 import com.jitse.example.service.MyService;
 
 import butterknife.ButterKnife;

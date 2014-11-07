@@ -3,63 +3,87 @@
     package="com.jitse.example" >
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:name="com.jitse.example.ExampleApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        android:name=".ExampleApplication"
-        >
+        android:theme="@style/AppTheme" >
         <activity
-            android:name=".MyActivity"
+            android:name="com.jitse.example.activities.MyActivity"
             android:label="@string/app_name" >
         </activity>
-        <activity android:name=".RatioActivity" >
+        <activity android:name="com.jitse.example.activities.RatioActivity" >
         </activity>
 
         <service
-            android:name=".service.MyService"
+            android:name="com.jitse.example.service.MyService"
             android:label="MyService" >
         </service>
 
         <activity
-            android:name=".FrameLayoutActivity"
+            android:name="com.jitse.example.activities.FrameLayoutActivity"
             android:label="@string/title_activity_frame_layout" >
         </activity>
         <activity
-            android:name=".DialogFragmentActivity"
+            android:name="com.jitse.example.activities.DialogFragmentActivity"
             android:label="@string/title_activity_dialog_fragment" >
         </activity>
         <activity
-            android:name=".NotificationActivity"
+            android:name="com.jitse.example.activities.NotificationActivity"
             android:label="@string/title_activity_notification" >
         </activity>
         <activity
-            android:name=".NotificationResultActivity"
+            android:name="com.jitse.example.activities.NotificationResultActivity"
             android:label="@string/title_activity_notification_result" >
         </activity>
         <activity
-            android:name=".BarcodeActivity"
+            android:name="com.jitse.example.activities.BarcodeActivity"
             android:label="@string/title_activity_barcode" >
         </activity>
         <activity
-            android:name=".CircularActivity"
+            android:name="com.jitse.example.activities.CircularActivity"
             android:label="@string/title_activity_circular" >
         </activity>
         <activity
-            android:name=".RecyclerViewActivity"
+            android:name="com.jitse.example.activities.RecyclerViewActivity"
             android:label="@string/title_activity_cards" >
-
         </activity>
         <activity
-            android:name=".RetrofitActivity"
+            android:name="com.jitse.example.activities.RetrofitActivity"
             android:label="@string/title_activity_retrofit" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.jitse.example.intern.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="com.jitse.example.intern.HeroActivity"
+            android:label="@string/title_activity_hero" >
+        </activity>
+        <activity
+            android:name="com.jitse.example.transition.ImageTransition1Activity"
+            android:label="@string/title_activity_image_transition1" >
+        </activity>
+        <activity
+            android:name="com.jitse.example.transition.ImageTransition2Activity"
+            android:label="@string/title_activity_image_transition2" >
+        </activity>
+        <activity
+            android:name="com.jitse.example.activities.RippleActivity"
+            android:label="@string/title_activity_ripple" >
+        </activity>
+        <activity
+            android:name="com.jitse.example.activities.JacksonActivity"
+            android:label="@string/title_activity_jackson" >
+
         </activity>
     </application>
 

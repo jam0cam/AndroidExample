@@ -1,4 +1,4 @@
-package com.jitse.example;
+package com.jitse.example.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
+import com.jitse.example.R;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;

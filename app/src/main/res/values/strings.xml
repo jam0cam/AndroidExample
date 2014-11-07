@@ -15,5 +15,31 @@
     <string name="title_activity_cards">CardsActivity</string>
     <string name="image">image</string>
     <string name="title_activity_retrofit">RetrofitActivity</string>
+    <string name="title_activity_main">Shoes</string>
+    <string name="title_activity_hero">HeroActivity</string>
+    <string name="title_activity_image_transition1">ImageTransition1Activity</string>
+    <string name="title_activity_image_transition2">ImageTransition2Activity</string>
+
+    <string-array name="images_list">
+        <item>http://www.zappos.com/images/z/2/7/2/7/3/6/2727366-p-MULTIVIEW.jpg</item>
+        <item>http://www.zappos.com/images/z/2/7/4/4/0/0/2744001-p-MULTIVIEW.jpg</item>
+        <item>http://www.zappos.com/images/z/2/4/7/5/3/3/2475333-p-MULTIVIEW.jpg</item>
+        <item>http://www.zappos.com/images/z/2/6/2/8/1/0/2628105-p-MULTIVIEW.jpg</item>
+        <item>http://www.zappos.com/images/z/2/6/2/7/3/5/2627354-p-MULTIVIEW.jpg</item>
+        <item>http://www.zappos.com/images/z/2/7/3/8/3/8/2738382-p-MULTIVIEW.jpg</item>
+        <item>http://www.zappos.com/images/z/2/4/7/4/6/6/2474664-p-MULTIVIEW.jpg</item>
+    </string-array>
+    <string-array name="shoe_brands">
+        <item>Nike</item>
+        <item>Adidas</item>
+        <item>Brooks</item>
+        <item>Asics</item>
+        <item>Puma</item>
+        <item>New Balance</item>
+        <item>Saucony</item>
+    </string-array>
+
+    <string name="title_activity_ripple">RippleActivity</string>
+    <string name="title_activity_jackson">JacksonActivity</string>
 
 </resources>

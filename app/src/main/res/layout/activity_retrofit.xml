@@ -6,27 +6,81 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.jitse.example.RetrofitActivity"
+    tools:context="com.jitse.example.activities.RetrofitActivity"
     android:orientation="vertical"
     >
-    <EditText
-        android:id="@+id/et_search"
-        android:layout_width="100dp"
+    <LinearLayout
+        android:id="@+id/ll_zappos"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:hint="Searh Here..."
-        android:text="69"
+        android:orientation="horizontal"
         android:layout_alignParentTop="true"
-    />
-    <Button
-        android:id="@+id/btn_search"
-        android:layout_width="wrap_content"
+        >
+        <EditText
+            android:id="@+id/et_search_zappos"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:hint="Searh Here..."
+            android:text="69"
+            />
+        <Button
+            android:id="@+id/btn_search_zappos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="Search"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_search_mafia"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:text="Search"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@id/et_search"
-        />
+        android:orientation="horizontal"
+        android:layout_below="@id/ll_zappos"
+        >
+        <EditText
+            android:id="@+id/et_search_mafia"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:hint="Searh Here..."
+            android:text="Nike"
+            />
+        <Button
+            android:id="@+id/btn_search_mafia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="Search Mafia"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_mafia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/ll_search_mafia"
+        >
+        <EditText
+            android:id="@+id/et_product_mafia"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:hint="Searh Here..."
+            android:text="BT00JQXB0M"
+            />
+        <Button
+            android:id="@+id/btn_product_mafia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="Mafia Product"
+            />
+    </LinearLayout>
     <TextView
         android:id="@+id/tv_results"
         android:layout_width="match_parent"
@@ -34,6 +88,6 @@
         android:textSize="25sp"
         android:singleLine="false"
         android:layout_centerInParent="true"
-        android:layout_below="@id/et_search"
+        android:layout_below="@id/ll_mafia"
         />
 </RelativeLayout>

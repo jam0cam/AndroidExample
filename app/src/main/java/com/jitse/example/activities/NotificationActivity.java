@@ -1,4 +1,4 @@
-package com.jitse.example;
+package com.jitse.example.activities;
 
 import android.app.Activity;
 import android.app.NotificationManager;
@@ -6,6 +6,8 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
+
+import com.jitse.example.R;
 
 public class NotificationActivity extends Activity {
 

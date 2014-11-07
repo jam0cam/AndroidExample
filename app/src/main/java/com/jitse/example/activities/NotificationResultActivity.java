@@ -1,40 +1,26 @@
-package com.jitse.example;
+package com.jitse.example.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
-import android.widget.RelativeLayout;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
+import com.jitse.example.R;
 
 
-public class FrameLayoutActivity extends Activity {
-
-    @InjectView(R.id.fl_main)
-    FrameLayout mFlMain;
+public class NotificationResultActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_frame_layout);
-        ButterKnife.inject(this);
-
-        String option = getIntent().getStringExtra("option");
-        if (option.equals("1")) {
-            mFlMain.setLayoutParams(new RelativeLayout.LayoutParams(20, 20));
-        } else {
-            mFlMain.setLayoutParams(new RelativeLayout.LayoutParams(300, 300));
-        }
+        setContentView(R.layout.activity_notification_result);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.frame_layout, menu);
+        getMenuInflater().inflate(R.menu.notification_result, menu);
         return true;
     }
 
