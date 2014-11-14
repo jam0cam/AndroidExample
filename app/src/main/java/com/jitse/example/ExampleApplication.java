@@ -27,7 +27,6 @@ public class ExampleApplication extends Application {
 
     public static String API = "https://api.zappos.com";
     public static String MAFIA_API = "https://mafia.integ.amazon.com/";
-    public static String MAFIA_ADMIN_API = "https://admin-mafia.integ.amazon.com/";
     private static final String KEY = "5ca1aa6b9151f729f5b7f05b14dba5ff8aedb975";
     BrandService mBrandService;
 
@@ -96,12 +95,8 @@ public class ExampleApplication extends Application {
                 .setEndpoint(MAFIA_API)
                 .build();
 
-        RestAdapter mafiaAdminRestAdapter = new RestAdapter.Builder()
-                .setEndpoint(MAFIA_ADMIN_API)
-                .build();
-
         mSearchService = mafiaRestAdapter.create(SearchService.class);
-        mProductService = mafiaAdminRestAdapter.create(ProductService.class);
+        mProductService = mafiaRestAdapter.create(ProductService.class);
     }
 
     public BrandService getBrandService() {

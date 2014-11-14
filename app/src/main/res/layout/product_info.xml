@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/product_info_container"
+    android:layout_width="match_parent"
+    android:layout_height="125dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:background="@color/purple"
+    android:padding="16dp"
+    android:layout_below="@id/img_product"
+    >
+    <ImageButton
+        android:id="@+id/btn_add_to_cart"
+        android:layout_alignParentEnd="true"
+        android:layout_width="@dimen/floating_action_button_size"
+        android:layout_height="@dimen/floating_action_button_size"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="-44dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/oval_ripple"
+        android:stateListAnimator="@anim/button_elevation"
+        android:src="@drawable/ic_action_cart"
+        android:elevation="@dimen/elevation_low"
+        />
+
+    <TextView
+        android:id="@+id/tv_product_brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Brand"
+        android:textSize="25sp"
+        android:transitionName="@string/viewName_product_brand"
+        android:text="Ivanka Trump"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_product_brand"
+        android:hint="Product"
+        android:textSize="15sp"
+        android:transitionName="@string/viewName_product_title"
+        android:text="Janie"
+        android:textColor="@color/white"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        >
+        <RatingBar
+            android:id="@+id/rb_ratings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="4.5"
+            style="?android:attr/ratingBarStyleSmall"
+            android:clickable="false"
+            />
+        <TextView
+            android:id="@+id/tv_reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:text="66 Reviews"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:transitionName="@string/viewName_product_price"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="25sp"
+        android:text="$99.90"
+        android:textColor="@color/white"
+        />
+</RelativeLayout>

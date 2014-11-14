@@ -1,11 +1,21 @@
 <resources>
 
+    <style name="MyTheme" parent="Theme.AppCompat.Light">
+    </style>
+    
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Material">
-        <!-- enable window content transitions -->
-        <item name="android:windowContentTransitions">true</item>
-        <item name="android:windowAllowEnterTransitionOverlap">true</item>
-        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+    <style name="ProductHeader" parent="@android:style/TextAppearance.Large">
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+    </style>
+    <style name="ProductText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Button.Raised" parent="@android:style/Widget.Button">
+        <item name="android:textColor">@color/green</item>
+        <item name="android:elevation">0dp</item>
     </style>
 
 </resources>

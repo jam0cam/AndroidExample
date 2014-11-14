@@ -9,7 +9,7 @@ import retrofit.http.Path;
  */
 public interface ProductService {
 
-    @GET("/run/revising/v1/product/asin/{asin}")
+    @GET("/v1/product/asin/{asin}")
     void performSearch(@Path("asin") String asin, Callback<ProductResponse> callback);
 
 }

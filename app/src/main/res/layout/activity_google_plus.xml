@@ -1,0 +1,19 @@
+
+<!-- in a real application you should use styles and dimens... -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    >
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+    <include
+        android:id="@+id/sticky_header"
+        layout="@layout/sticky_header"
+        />
+</FrameLayout>

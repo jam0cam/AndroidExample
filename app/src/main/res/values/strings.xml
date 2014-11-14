@@ -41,5 +41,14 @@
 
     <string name="title_activity_ripple">RippleActivity</string>
     <string name="title_activity_jackson">JacksonActivity</string>
+    <string name="title_activity_horizontal_list_view">HorizontalListViewActivity</string>
+    <string name="title_activity_product">ProductActivity</string>
+    <string name="title_activity_l__product_small_screen">Product screen</string>
+    <string name="viewName_product_image">product_image</string>
+    <string name="viewName_product_brand">product_brand</string>
+    <string name="viewName_product_title">product_title</string>
+    <string name="viewName_product_price">product_price</string>
+    <string name="title_activity_google_plus">GooglePlusActivity</string>
+    <string name="title_activity_card">CardActivity</string>
 
 </resources>

@@ -1,0 +1,102 @@
+<com.jitse.example.views.MyScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:clipToPadding="false"
+    android:clipChildren="false"
+    >
+
+        <RelativeLayout
+            android:id="@+id/rl_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:background="@color/white"
+            >
+
+            <ImageView
+                android:id="@+id/img_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:transitionName="@string/viewName_product_image"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/janie"
+                />
+
+
+            <include
+                android:id="@+id/product_info_container"
+                layout="@layout/product_info"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_bottom_portion"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_gray"
+                android:layout_below="@id/product_info_container"
+                android:gravity="left"
+                android:paddingBottom="30dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Colors"
+                    style="@style/ProductHeader"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_styles"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:clipToPadding="false"
+                    android:clipChildren="false"
+                    >
+                </android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Details"
+                    style="@style/ProductHeader"
+                    />
+
+                <include layout="@layout/details_card" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="66 Reviews"
+                    style="@style/ProductHeader"
+                    />
+
+                <include layout="@layout/reviews_card" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Smiilar Items"
+                    style="@style/ProductHeader"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_similar_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:clipToPadding="false"
+                    >
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+</com.jitse.example.views.MyScrollView>
