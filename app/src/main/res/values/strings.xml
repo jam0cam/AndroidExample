@@ -50,5 +50,8 @@
     <string name="viewName_product_price">product_price</string>
     <string name="title_activity_google_plus">GooglePlusActivity</string>
     <string name="title_activity_card">CardActivity</string>
+    <string name="title_activity_image_scroll_transition">ImageScrollTransition</string>
+    <string name="transition_product_image">transition_image</string>
+    <string name="title_activity_animation">AnimationActivity</string>
 
 </resources>
