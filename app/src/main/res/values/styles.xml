@@ -1,8 +1,8 @@
 <resources>
 
-    <style name="MyTheme" parent="Theme.AppCompat.Light">
+    <style name="MyTheme" parent="Theme.AppCompat.Light.NoActionBar">
     </style>
-    
+
     <!-- Base application theme. -->
     <style name="ProductHeader" parent="@android:style/TextAppearance.Large">
         <item name="android:paddingTop">16dp</item>

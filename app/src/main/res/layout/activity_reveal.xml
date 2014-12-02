@@ -1,0 +1,60 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.jitse.example.activities.AnimationActivity"
+    android:clipChildren="false"
+    >
+
+    <ImageView
+        android:id="@+id/img_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/nike_free_main"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <Button
+        android:id="@+id/btn_animate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="animate"
+        android:layout_below="@id/img_main"
+        android:layout_gravity="center|center_vertical"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/btn_animate"
+        android:layout_gravity="bottom"
+        android:clipChildren="false"
+        >
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="100dp"
+            android:src="@drawable/gray_green"
+            android:scaleType="fitCenter"
+            />
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="100dp"
+            android:src="@drawable/orange"
+            android:scaleType="fitCenter"
+            />
+        <ImageView
+            android:id="@+id/img_blue"
+            android:layout_width="140dp"
+            android:layout_height="100dp"
+            android:src="@drawable/royal_blue"
+            android:scaleType="fitCenter"
+            />
+    </LinearLayout>
+
+</FrameLayout>

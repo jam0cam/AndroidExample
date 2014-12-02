@@ -53,5 +53,9 @@
     <string name="title_activity_image_scroll_transition">ImageScrollTransition</string>
     <string name="transition_product_image">transition_image</string>
     <string name="title_activity_animation">AnimationActivity</string>
+    <string name="title_activity_reveal">RevealActivity</string>
+    <string name="title_activity_tint">TintActivity</string>
+    <string name="title_activity_toolbar">ToolbarActivity</string>
+    <string name="title_activity_pager_transition">PagerTransitionActivity</string>
 
 </resources>

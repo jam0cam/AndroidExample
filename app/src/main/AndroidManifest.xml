@@ -98,11 +98,27 @@
         <activity
             android:name="com.jitse.example.transition.ImageScrollTransition"
             android:label="@string/title_activity_image_scroll_transition" >
-
         </activity>
         <activity
             android:name="com.jitse.example.activities.AnimationActivity"
             android:label="@string/title_activity_animation" >
+
+        </activity>
+        <activity
+            android:name="com.jitse.example.activities.RevealActivity"
+            android:label="@string/title_activity_reveal" >
+        </activity>
+        <activity
+            android:name="com.jitse.example.activities.TintActivity"
+            android:label="@string/title_activity_tint" >
+        </activity>
+        <activity
+            android:name="com.jitse.example.activities.ToolbarActivity"
+            android:label="@string/title_activity_toolbar" >
+        </activity>
+        <activity
+            android:name="com.jitse.example.activities.PagerTransitionActivity"
+            android:label="@string/title_activity_pager_transition" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
