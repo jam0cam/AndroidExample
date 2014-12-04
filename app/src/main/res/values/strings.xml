@@ -57,5 +57,7 @@
     <string name="title_activity_tint">TintActivity</string>
     <string name="title_activity_toolbar">ToolbarActivity</string>
     <string name="title_activity_pager_transition">PagerTransitionActivity</string>
+    <string name="title_activity_webview">WebviewActivity</string>
+    <string name="title_activity_fragment_reveal">FragmentRevealActivity</string>
 
 </resources>
