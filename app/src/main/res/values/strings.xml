@@ -59,5 +59,7 @@
     <string name="title_activity_pager_transition">PagerTransitionActivity</string>
     <string name="title_activity_webview">WebviewActivity</string>
     <string name="title_activity_fragment_reveal">FragmentRevealActivity</string>
+    <string name="title_activity_image">ImageActivity</string>
+    <string name="title_activity_multiple_list_view">MultipleListViewActivity</string>
 
 </resources>

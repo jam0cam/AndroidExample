@@ -1,40 +1,66 @@
 package com.jitse.example.activities;
 
-import android.support.v7.app.ActionBarActivity;
+import android.animation.Animator;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.ActionBarActivity;
+import android.view.View;
+import android.view.ViewAnimationUtils;
+import android.widget.Button;
+import android.widget.FrameLayout;
 
 import com.jitse.example.R;
+import com.jitse.example.fragments.ReviewsFragment;
+
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+import butterknife.OnClick;
 
 public class FragmentRevealActivity extends ActionBarActivity {
+
+    @InjectView(R.id.btn)
+    Button mBtn;
+
+    @InjectView(R.id.fl_reviews)
+    FrameLayout mFlReviews;
+
+    @InjectView(R.id.fl_master)
+    FrameLayout mFlMaster;
+
+    private ReviewsFragment mFragment;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment_reveal);
+
+        ButterKnife.inject(this);
+
+        mFragment = (ReviewsFragment) getFragmentManager().findFragmentById(R.id.frag_reviews);
+    }
+
+    @OnClick(R.id.btn)
+    public void clicked() {
+        revealReviews();
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_fragment_reveal, menu);
-        return true;
+    private void revealReviews() {
+
+        int[] locations = new int[2];
+
+        mBtn.getLocationOnScreen(locations);
+
+        int centerY = locations[1] + mBtn.getHeight()/2;
+        int centerX = mBtn.getWidth()/2;
+
+        int radius = Math.max(mFlMaster.getWidth(), mFlMaster.getHeight());
+        Animator anim = ViewAnimationUtils.createCircularReveal(mFlReviews, centerX, centerY, 0, radius);
+
+        mFlReviews.setVisibility(View.VISIBLE);
+
+        anim.setDuration(500);
+        anim.start();
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

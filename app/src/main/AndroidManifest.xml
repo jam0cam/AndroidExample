@@ -6,132 +6,141 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:name="com.jitse.example.ExampleApplication"
+        android:name=".ExampleApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/MyTheme" >
         <activity
-            android:name="com.jitse.example.activities.MyActivity"
+            android:name=".activities.MyActivity"
             android:label="@string/app_name" >
         </activity>
-        <activity android:name="com.jitse.example.activities.RatioActivity" >
+        <activity android:name=".activities.RatioActivity" >
         </activity>
 
         <service
-            android:name="com.jitse.example.service.MyService"
+            android:name=".service.MyService"
             android:label="MyService" >
         </service>
 
         <activity
-            android:name="com.jitse.example.activities.FrameLayoutActivity"
+            android:name=".activities.FrameLayoutActivity"
             android:label="@string/title_activity_frame_layout" >
         </activity>
         <activity
-            android:name="com.jitse.example.activities.DialogFragmentActivity"
+            android:name=".activities.DialogFragmentActivity"
             android:label="@string/title_activity_dialog_fragment" >
         </activity>
         <activity
-            android:name="com.jitse.example.activities.NotificationActivity"
+            android:name=".activities.NotificationActivity"
             android:label="@string/title_activity_notification" >
         </activity>
         <activity
-            android:name="com.jitse.example.activities.NotificationResultActivity"
+            android:name=".activities.NotificationResultActivity"
             android:label="@string/title_activity_notification_result" >
         </activity>
         <activity
-            android:name="com.jitse.example.activities.BarcodeActivity"
+            android:name=".activities.BarcodeActivity"
             android:label="@string/title_activity_barcode" >
         </activity>
         <activity
-            android:name="com.jitse.example.activities.CircularActivity"
+            android:name=".activities.CircularActivity"
             android:label="@string/title_activity_circular" >
         </activity>
         <activity
-            android:name="com.jitse.example.activities.RecyclerViewActivity"
+            android:name=".activities.RecyclerViewActivity"
             android:label="@string/title_activity_cards" >
         </activity>
         <activity
-            android:name="com.jitse.example.activities.RetrofitActivity"
+            android:name=".activities.RetrofitActivity"
             android:label="@string/title_activity_retrofit" >
         </activity>
         <activity
-            android:name="com.jitse.example.intern.MainActivity"
+            android:name=".intern.MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
         <activity
-            android:name="com.jitse.example.intern.HeroActivity"
+            android:name=".intern.HeroActivity"
             android:label="@string/title_activity_hero" >
         </activity>
         <activity
-            android:name="com.jitse.example.transition.ImageTransition1Activity"
+            android:name=".transition.ImageTransition1Activity"
             android:label="@string/title_activity_image_transition1" >
         </activity>
         <activity
-            android:name="com.jitse.example.transition.ImageTransition2Activity"
+            android:name=".transition.ImageTransition2Activity"
             android:label="@string/title_activity_image_transition2" >
         </activity>
         <activity
-            android:name="com.jitse.example.activities.RippleActivity"
+            android:name=".activities.RippleActivity"
             android:label="@string/title_activity_ripple" >
         </activity>
         <activity
-            android:name="com.jitse.example.activities.JacksonActivity"
+            android:name=".activities.JacksonActivity"
             android:label="@string/title_activity_jackson" >
         </activity>
         <activity
-            android:name="com.jitse.example.activities.HorizontalListViewActivity"
+            android:name=".activities.HorizontalListViewActivity"
             android:label="@string/title_activity_horizontal_list_view" >
         </activity>
         <activity
-            android:name="com.jitse.example.zappos.ProductActivity"
+            android:name=".zappos.ProductActivity"
             android:label="@string/title_activity_product" >
         </activity>
         <activity
-            android:name="com.jitse.example.activities.GooglePlusActivity"
+            android:name=".activities.GooglePlusActivity"
             android:label="@string/title_activity_google_plus" >
         </activity>
         <activity
-            android:name="com.jitse.example.activities.CardActivity"
+            android:name=".activities.CardActivity"
             android:label="@string/title_activity_card" >
         </activity>
         <activity
-            android:name="com.jitse.example.transition.ImageScrollTransition"
+            android:name=".transition.ImageScrollTransition"
             android:label="@string/title_activity_image_scroll_transition" >
         </activity>
         <activity
-            android:name="com.jitse.example.activities.AnimationActivity"
+            android:name=".activities.AnimationActivity"
             android:label="@string/title_activity_animation" >
         </activity>
         <activity
-            android:name="com.jitse.example.activities.RevealActivity"
+            android:name=".activities.RevealActivity"
             android:label="@string/title_activity_reveal" >
         </activity>
         <activity
-            android:name="com.jitse.example.activities.TintActivity"
+            android:name=".activities.TintActivity"
             android:label="@string/title_activity_tint" >
         </activity>
         <activity
-            android:name="com.jitse.example.activities.ToolbarActivity"
+            android:name=".activities.ToolbarActivity"
             android:label="@string/title_activity_toolbar" >
         </activity>
         <activity
-            android:name="com.jitse.example.activities.PagerTransitionActivity"
+            android:name=".activities.PagerTransitionActivity"
             android:label="@string/title_activity_pager_transition" >
         </activity>
         <activity
-            android:name="com.jitse.example.activities.WebviewActivity"
+            android:name=".activities.WebviewActivity"
             android:label="@string/title_activity_webview" >
+        </activity>
+        <activity
+            android:name=".activities.FragmentRevealActivity"
+            android:label="@string/title_activity_fragment_reveal" >
+
+        </activity>
+        <activity
+            android:name=".activities.ImageActivity"
+            android:label="@string/title_activity_image" >
+        </activity>
+        <activity
+            android:name=".activities.MultipleListViewActivity"
+            android:label="@string/title_activity_multiple_list_view" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name="com.jitse.example.activities.FragmentRevealActivity"
-            android:label="@string/title_activity_fragment_reveal" >
         </activity>
     </application>
 
