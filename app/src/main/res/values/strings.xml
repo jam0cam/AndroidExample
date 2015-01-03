@@ -61,5 +61,6 @@
     <string name="title_activity_fragment_reveal">FragmentRevealActivity</string>
     <string name="title_activity_image">ImageActivity</string>
     <string name="title_activity_multiple_list_view">MultipleListViewActivity</string>
+    <string name="title_activity_alarm">AlarmActivity</string>
 
 </resources>
