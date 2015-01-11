@@ -1,6 +1,7 @@
 package com.jitse.example;
 
 import android.app.Application;
+import android.graphics.Bitmap;
 
 import com.jitse.example.retrofit.BrandService;
 import com.jitse.example.retrofit.ProductService;
@@ -32,6 +33,8 @@ public class ExampleApplication extends Application {
 
     SearchService mSearchService;
     ProductService mProductService;
+
+    public Bitmap mBitmap;
 
     @Override
     public void onCreate() {

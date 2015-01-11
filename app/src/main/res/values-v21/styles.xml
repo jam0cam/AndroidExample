@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- enable window content transitions -->
+        <item name="android:windowContentTransitions">true</item>
+
+    </style>
+
+
+    <style name="Button.Raised" parent="@android:style/Widget.Button">
+        <item name="android:textColor">@color/green</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+
+</resources>

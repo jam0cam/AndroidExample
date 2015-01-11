@@ -140,13 +140,22 @@
         <activity
             android:name=".activities.AlarmActivity"
             android:label="@string/title_activity_alarm" >
+        </activity>
+
+        <receiver android:name=".receivers.AlarmReceiver" />
+
+        <activity
+            android:name=".activities.AlbumActivity"
+            android:label="@string/title_activity_album" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <receiver android:name=".receivers.AlarmReceiver"/>
+        <activity
+            android:name=".activities.PictureActivity"
+            android:label="@string/title_activity_picture" >
+        </activity>
     </application>
 
 </manifest>

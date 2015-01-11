@@ -3,6 +3,7 @@
     <style name="MyTheme" parent="Theme.AppCompat.Light.NoActionBar">
     </style>
 
+
     <!-- Base application theme. -->
     <style name="ProductHeader" parent="@android:style/TextAppearance.Large">
         <item name="android:paddingTop">16dp</item>
@@ -11,11 +12,6 @@
     </style>
     <style name="ProductText" parent="@android:style/TextAppearance">
         <item name="android:textColor">@color/black</item>
-    </style>
-
-    <style name="Button.Raised" parent="@android:style/Widget.Button">
-        <item name="android:textColor">@color/green</item>
-        <item name="android:elevation">0dp</item>
     </style>
 
 </resources>
