@@ -147,14 +147,20 @@
         <activity
             android:name=".activities.AlbumActivity"
             android:label="@string/title_activity_album" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity
             android:name=".activities.PictureActivity"
             android:label="@string/title_activity_picture" >
+        </activity>
+        <activity
+            android:name=".activities.HtmlActivity"
+            android:label="@string/title_activity_html" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
