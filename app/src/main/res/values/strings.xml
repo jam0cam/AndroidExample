@@ -66,5 +66,8 @@
     <string name="title_activity_picture">PictureActivity</string>
     <string name="title_activity_multiple_fragment">MultipleFragmentActivity</string>
     <string name="title_activity_html">HtmlActivity</string>
+    <string name="title_activity_state_list">StateListActivity</string>
+    <string name="title_activity_spinner">SpinnerActivity</string>
+    <string name="title_activity_twitter">TwitterActivity</string>
 
 </resources>

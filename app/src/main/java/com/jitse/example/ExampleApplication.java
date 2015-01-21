@@ -7,6 +7,9 @@ import com.jitse.example.retrofit.BrandService;
 import com.jitse.example.retrofit.ProductService;
 import com.jitse.example.retrofit.SearchService;
 
+import com.twitter.sdk.android.Twitter;
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+import io.fabric.sdk.android.Fabric;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
@@ -26,6 +29,10 @@ import retrofit.RestAdapter;
  */
 public class ExampleApplication extends Application {
 
+    // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
+    private static final String TWITTER_KEY = "WEyOBPFdqY2IhYUBmGNE8IXKf";
+    private static final String TWITTER_SECRET = "35oIo77kbnHxbpPBfws9PUq52v60dXACJGzOOyFSvaAnGncwo5";
+
     public static String API = "https://api.zappos.com";
     public static String MAFIA_API = "https://mafia.integ.amazon.com/";
     private static final String KEY = "5ca1aa6b9151f729f5b7f05b14dba5ff8aedb975";
@@ -39,6 +46,8 @@ public class ExampleApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
+        Fabric.with(this, new Twitter(authConfig));
         try {
             // Create a trust manager that does not validate certificate chains
             TrustManager[] trustAllCerts = new TrustManager[]{

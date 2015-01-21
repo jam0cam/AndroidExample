@@ -147,7 +147,6 @@
         <activity
             android:name=".activities.AlbumActivity"
             android:label="@string/title_activity_album" >
-
         </activity>
         <activity
             android:name=".activities.PictureActivity"
@@ -156,12 +155,26 @@
         <activity
             android:name=".activities.HtmlActivity"
             android:label="@string/title_activity_html" >
+        </activity>
+        <activity
+            android:name=".StateListActivity"
+            android:label="@string/title_activity_state_list" >
+        </activity>
+        <activity
+            android:name=".activities.SpinnerActivity"
+            android:label="@string/title_activity_spinner" >
+        </activity>
+        <activity
+            android:name=".activities.TwitterActivity"
+            android:label="@string/title_activity_twitter" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="88cffa61df5093d0ff019612800a07c8af00423f" />
     </application>
 
 </manifest>
