@@ -18,7 +18,7 @@
         android:layout_gravity="top|end"
         android:layout_marginTop="-44dp"
         android:layout_marginRight="16dp"
-        android:background="@drawable/oval_ripple"
+        android:background="@drawable/oval_ripple_green"
         android:stateListAnimator="@anim/button_elevation"
         android:src="@drawable/ic_action_cart"
         android:elevation="@dimen/elevation_low"

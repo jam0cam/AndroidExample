@@ -15,7 +15,7 @@
         android:id="@+id/fab"
         android:layout_width="@dimen/floating_action_button_size"
         android:layout_height="@dimen/floating_action_button_size"
-        android:background="@drawable/oval_ripple"
+        android:background="@drawable/oval_ripple_green"
         android:stateListAnimator="@anim/button_elevation"
         android:src="@drawable/ic_action_cart"
         android:elevation="@dimen/elevation_low"

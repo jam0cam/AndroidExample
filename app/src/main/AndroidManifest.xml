@@ -167,14 +167,21 @@
         <activity
             android:name=".activities.TwitterActivity"
             android:label="@string/title_activity_twitter" >
+
+        </activity>
+
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="88cffa61df5093d0ff019612800a07c8af00423f" />
+
+        <activity
+            android:name=".activities.FabActivity"
+            android:label="@string/title_activity_fab" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <meta-data
-            android:name="com.crashlytics.ApiKey"
-            android:value="88cffa61df5093d0ff019612800a07c8af00423f" />
     </application>
 
 </manifest>
