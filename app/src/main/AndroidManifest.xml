@@ -167,7 +167,6 @@
         <activity
             android:name=".activities.TwitterActivity"
             android:label="@string/title_activity_twitter" >
-
         </activity>
 
         <meta-data
@@ -177,8 +176,13 @@
         <activity
             android:name=".activities.FabActivity"
             android:label="@string/title_activity_fab" >
+        </activity>
+        <activity
+            android:name=".activities.CircularFabActivity"
+            android:label="@string/title_activity_circular_fab" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -1,0 +1,39 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.jitse.example.activities.CircularFabActivity">
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/ring_progress"
+        android:layout_gravity="center"
+        android:indeterminateDuration="800"
+        />
+
+    <ImageButton
+        android:id="@+id/image_button"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center"
+        android:background="@drawable/oval_ripple_green"
+        android:src="@drawable/ic_cart_white"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COMPLETE"
+        android:textSize="25sp"
+        android:layout_gravity="bottom|center_horizontal"
+        />
+</FrameLayout>

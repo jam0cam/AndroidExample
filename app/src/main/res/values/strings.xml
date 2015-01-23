@@ -70,5 +70,6 @@
     <string name="title_activity_spinner">SpinnerActivity</string>
     <string name="title_activity_twitter">TwitterActivity</string>
     <string name="title_activity_fab">FabActivity</string>
+    <string name="title_activity_circular_fab">CircularFabActivity</string>
 
 </resources>

@@ -15,4 +15,7 @@
 
     <dimen name="high_elevation">8dp</dimen>
     <dimen name="low_elevation">2dp</dimen>
+
+    <dimen name="progress_thickness">5dp</dimen>
+    <dimen name="progress_radius">14dp</dimen>
 </resources>
