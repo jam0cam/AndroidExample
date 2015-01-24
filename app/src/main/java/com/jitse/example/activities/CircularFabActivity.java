@@ -2,6 +2,7 @@ package com.jitse.example.activities;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -27,6 +28,9 @@ public class CircularFabActivity extends ActionBarActivity {
     @InjectView(R.id.button)
     Button mButton;
 
+    @InjectView(R.id.btn_change)
+    Button mBtnChange;
+
     @InjectView(R.id.frame_layout)
     FrameLayout mFrameLayout;
 
@@ -36,15 +40,19 @@ public class CircularFabActivity extends ActionBarActivity {
         setContentView(R.layout.activity_circular_fab);
 
         ButterKnife.inject(this);
+    }
 
+    @OnClick(R.id.btn_change)
+    public void changeColor() {
+        Rect bounds = mProgressBar.getIndeterminateDrawable().getBounds();
+        mProgressBar.setIndeterminateDrawable(getResources().getDrawable(R.drawable.ring_progress));
+        mProgressBar.getIndeterminateDrawable().setBounds(bounds);
+        mProgressBar.setIndeterminate(false);
+        mProgressBar.setIndeterminate(true);
     }
 
     @OnClick(R.id.button)
-    public void clicked() {
-        animateFinish();
-    }
-
-    private void animateFinish() {
+    public void animateFinish() {
         mImageButton.animate().alpha(0).setDuration(250).setListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {

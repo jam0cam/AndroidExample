@@ -14,9 +14,9 @@
         android:layout_width="84dp"
         android:layout_height="84dp"
         android:indeterminate="true"
-        android:indeterminateDrawable="@drawable/ring_progress"
         android:layout_gravity="center"
         android:indeterminateDuration="800"
+        android:indeterminateOnly="false"
         />
 
     <ImageButton
@@ -26,6 +26,16 @@
         android:layout_gravity="center"
         android:background="@drawable/oval_ripple_green"
         android:src="@drawable/ic_cart_white"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/btn_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHANGE COLOR"
+        android:textSize="25sp"
+        android:layout_gravity="top|center_horizontal"
         />
 
     <Button
