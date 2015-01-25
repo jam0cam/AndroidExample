@@ -16,6 +16,7 @@
         android:indeterminate="true"
         android:layout_gravity="center"
         android:indeterminateDuration="800"
+        android:indeterminateDrawable="@drawable/ring_progress"
         android:indeterminateOnly="false"
         />
 
