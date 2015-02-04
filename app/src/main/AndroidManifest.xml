@@ -194,7 +194,7 @@
             android:label="@string/title_activity_scene_transition" >
         </activity>
         <activity
-            android:name=".activities.ComplexSceneTransitionActivity"
+            android:name=".activities.PicassoSceneTransitionActivity"
             android:label="@string/title_activity_complex_scene_transition" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -17,9 +17,9 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
-public class ComplexSceneTransitionActivity extends ActionBarActivity {
+public class PicassoSceneTransitionActivity extends ActionBarActivity {
 
-    private static final String TAG = ComplexSceneTransitionActivity.class.getName();
+    private static final String TAG = PicassoSceneTransitionActivity.class.getName();
     @InjectView(R.id.button)
     Button mButton;
 
@@ -33,7 +33,7 @@ public class ComplexSceneTransitionActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_complex_scene_transition);
+        setContentView(R.layout.activity_picasso_scene_transition);
         ButterKnife.inject(this);
 
         String url = getIntent().getStringExtra("something");
@@ -60,7 +60,7 @@ public class ComplexSceneTransitionActivity extends ActionBarActivity {
     @OnClick(R.id.button)
     public void clicked(){
         Log.d(TAG, "onClicked");
-        Intent intent = new Intent(this, ComplexSceneTransitionActivity.class);
+        Intent intent = new Intent(this, PicassoSceneTransitionActivity.class);
 
         intent.putExtra("something", "http://a1.zassets.com/images/z/3/0/2/7/2/8/3027286-p-MULTIVIEW.jpg");
 
