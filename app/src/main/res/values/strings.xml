@@ -74,5 +74,6 @@
     <string name="title_activity_immersive">ImmersiveActivity</string>
     <string name="title_activity_test">TestActivity</string>
     <string name="title_activity_scene_transition">SceneTransitionActivity</string>
+    <string name="title_activity_complex_scene_transition">ComplexSceneTransitionActivity</string>
 
 </resources>
