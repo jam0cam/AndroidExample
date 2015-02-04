@@ -180,9 +180,17 @@
         <activity
             android:name=".activities.CircularFabActivity"
             android:label="@string/title_activity_circular_fab" >
+        </activity>
+        <activity
+            android:name=".activities.ImmersiveActivity"
+            android:label="@string/title_activity_immersive" >
+
+        </activity>
+        <activity
+            android:name=".activities.TestActivity"
+            android:label="@string/title_activity_test" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

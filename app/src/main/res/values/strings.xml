@@ -71,5 +71,7 @@
     <string name="title_activity_twitter">TwitterActivity</string>
     <string name="title_activity_fab">FabActivity</string>
     <string name="title_activity_circular_fab">CircularFabActivity</string>
+    <string name="title_activity_immersive">ImmersiveActivity</string>
+    <string name="title_activity_test">TestActivity</string>
 
 </resources>
