@@ -75,5 +75,7 @@
     <string name="title_activity_test">TestActivity</string>
     <string name="title_activity_scene_transition">SceneTransitionActivity</string>
     <string name="title_activity_complex_scene_transition">ComplexSceneTransitionActivity</string>
+    <string name="title_activity_master_detail_transition">MasterDetailTransitionActivity</string>
+    <string name="title_activity_detail">DetailActivity</string>
 
 </resources>
