@@ -21,7 +21,7 @@ android {
 
     defaultConfig {
         applicationId "com.jitse.example"
-        minSdkVersion 17
+        minSdkVersion 16
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
@@ -54,6 +54,8 @@ dependencies {
     compile "com.android.support:appcompat-v7:21.0.0"
     compile 'com.fasterxml.jackson.core:jackson-databind:2.2.2'
     compile 'com.squareup.picasso:picasso:2.4.0'
+
+    compile 'io.reactivex:rxandroid:0.24.0'
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile('com.twitter.sdk.android:twitter:1.1.1@aar') {

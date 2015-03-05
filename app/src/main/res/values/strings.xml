@@ -77,5 +77,6 @@
     <string name="title_activity_complex_scene_transition">ComplexSceneTransitionActivity</string>
     <string name="title_activity_master_detail_transition">MasterDetailTransitionActivity</string>
     <string name="title_activity_detail">DetailActivity</string>
+    <string name="title_activity_rx">RxActivity</string>
 
 </resources>
