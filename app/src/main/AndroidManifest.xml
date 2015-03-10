@@ -200,7 +200,6 @@
         <activity
             android:name=".activities.MasterTransitionActivity"
             android:label="@string/title_activity_master_detail_transition" >
-
         </activity>
         <activity
             android:name=".activities.DetailActivity"
@@ -209,9 +208,12 @@
         <activity
             android:name=".activities.RxActivity"
             android:label="@string/title_activity_rx" >
+        </activity>
+        <activity
+            android:name=".activities.RxJavaActivity"
+            android:label="@string/title_activity_product" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

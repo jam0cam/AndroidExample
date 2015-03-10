@@ -6,10 +6,9 @@ import android.graphics.Bitmap;
 import com.jitse.example.retrofit.BrandService;
 import com.jitse.example.retrofit.ProductService;
 import com.jitse.example.retrofit.SearchService;
-
 import com.twitter.sdk.android.Twitter;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
-import io.fabric.sdk.android.Fabric;
+
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
@@ -21,6 +20,7 @@ import javax.net.ssl.SSLSession;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
+import io.fabric.sdk.android.Fabric;
 import retrofit.RequestInterceptor;
 import retrofit.RestAdapter;
 
@@ -108,7 +108,7 @@ public class ExampleApplication extends Application {
                 .build();
 
         mSearchService = mafiaRestAdapter.create(SearchService.class);
-        mProductService = mafiaRestAdapter.create(ProductService.class);
+        mProductService = zapposRestAdapter.create(ProductService.class);
     }
 
     public BrandService getBrandService() {

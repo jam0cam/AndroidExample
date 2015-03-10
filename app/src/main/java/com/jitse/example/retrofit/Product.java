@@ -1,21 +1,24 @@
 package com.jitse.example.retrofit;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.List;
 
 /**
  * Created by jitse on 11/5/14.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Product extends JsonIgnorable {
-    String onSale;
-    Review reviews;
-    String description;
-    String defaultProductType;
-    List<Style> styles;
-    List<String> genders;
-    String productName;
-    String brandName;
-    String defaultImageUrl;
-    String productId;
+    public String onSale;
+    public Review reviews;
+    public String description;
+    public String defaultProductType;
+    public List<Style> styles;
+    public List<String> genders;
+    public String productName;
+    public String brandName;
+    public String defaultImageUrl;
+    public String productId;
 
     public String getOnSale() {
         return onSale;
