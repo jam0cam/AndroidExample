@@ -216,15 +216,31 @@
         <activity
             android:name=".activities.DialogRevealActivity"
             android:label="@string/title_activity_dialog_reveal" >
-
         </activity>
         <activity
             android:name=".activities.VideoActivity"
             android:label="@string/title_activity_video" >
+
+        </activity>
+        <activity
+            android:name=".activities.DeepLinkActivity"
+            android:label="@string/title_activity_deep_link" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <intent-filter android:label="@string/title_activity_deep_link">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http://www.example.com/gizmos” -->
+                <data android:scheme="http"
+                    android:host="www.example.com"
+                    android:pathPrefix="/gizmos" />
+            </intent-filter>
+
         </activity>
     </application>
 
