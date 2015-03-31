@@ -212,14 +212,17 @@
         <activity
             android:name=".activities.RxJavaActivity"
             android:label="@string/title_activity_product" >
-
         </activity>
         <activity
             android:name=".activities.DialogRevealActivity"
             android:label="@string/title_activity_dialog_reveal" >
+
+        </activity>
+        <activity
+            android:name=".activities.VideoActivity"
+            android:label="@string/title_activity_video" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

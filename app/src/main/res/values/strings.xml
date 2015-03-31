@@ -79,5 +79,6 @@
     <string name="title_activity_detail">DetailActivity</string>
     <string name="title_activity_rx">RxActivity</string>
     <string name="title_activity_dialog_reveal">DialogRevealActivity</string>
+    <string name="title_activity_video">VideoActivity</string>
 
 </resources>
