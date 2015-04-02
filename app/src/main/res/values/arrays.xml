@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="daydream_gender_values">
+        <item>Both Men’s &amp; Women’s Products</item>
+        <item>Men’s Products</item>
+        <item>Women’s Products</item>
+    </string-array>
+
+    <string-array name="daydream_gender">
+        <item>both</item>
+        <item>Men</item>
+        <item>Women</item>
+    </string-array>
+
+</resources>

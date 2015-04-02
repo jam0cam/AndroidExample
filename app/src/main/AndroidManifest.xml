@@ -25,6 +25,21 @@
             android:label="MyService" >
         </service>
 
+        <service
+            android:name=".daydream.MyDream"
+            android:exported="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/my_dream_label"
+            android:permission="android.permission.BIND_DREAM_SERVICE"
+            >
+
+            <intent-filter>
+                <action android:name="android.service.dreams.DreamService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+
         <activity
             android:name=".activities.FrameLayoutActivity"
             android:label="@string/title_activity_frame_layout" >
