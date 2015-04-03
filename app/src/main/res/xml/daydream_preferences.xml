@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:defaultValue="both"
+        android:entries="@array/daydream_gender_values"
+        android:entryValues="@array/daydream_gender"
+        android:key="daydream_gender"
+        android:summary="%s"
+        android:title="@string/daydream_gender_pref_title"
+        />
+</PreferenceScreen>

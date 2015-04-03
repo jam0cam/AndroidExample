@@ -37,9 +37,13 @@
                 <action android:name="android.service.dreams.DreamService" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+
+            <!-- Point to additional information for this dream (optional) -->
+            <meta-data
+                android:name="android.service.dream"
+                android:resource="@xml/my_dream" />
         </service>
-
-
+        <activity android:name=".daydream.MyDreamSettingsActivity" />
         <activity
             android:name=".activities.FrameLayoutActivity"
             android:label="@string/title_activity_frame_layout" >
