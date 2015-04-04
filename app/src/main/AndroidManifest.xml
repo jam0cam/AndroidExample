@@ -24,17 +24,15 @@
             android:name=".service.MyService"
             android:label="MyService" >
         </service>
-
         <service
             android:name=".daydream.MyDream"
             android:exported="true"
             android:icon="@drawable/ic_launcher"
             android:label="@string/my_dream_label"
-            android:permission="android.permission.BIND_DREAM_SERVICE"
-            >
-
+            android:permission="android.permission.BIND_DREAM_SERVICE" >
             <intent-filter>
                 <action android:name="android.service.dreams.DreamService" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
@@ -43,6 +41,7 @@
                 android:name="android.service.dream"
                 android:resource="@xml/my_dream" />
         </service>
+
         <activity android:name=".daydream.MyDreamSettingsActivity" />
         <activity
             android:name=".activities.FrameLayoutActivity"
@@ -239,27 +238,31 @@
         <activity
             android:name=".activities.VideoActivity"
             android:label="@string/title_activity_video" >
-
         </activity>
         <activity
             android:name=".activities.DeepLinkActivity"
             android:label="@string/title_activity_deep_link" >
+
+            <intent-filter android:label="@string/title_activity_deep_link" >
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http://www.example.com/gizmos” -->
+                <data
+                    android:host="www.example.com"
+                    android:pathPrefix="/gizmos"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.PhetchActivity"
+            android:label="@string/title_activity_phetch" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-            <intent-filter android:label="@string/title_activity_deep_link">
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <!-- Accepts URIs that begin with "http://www.example.com/gizmos” -->
-                <data android:scheme="http"
-                    android:host="www.example.com"
-                    android:pathPrefix="/gizmos" />
-            </intent-filter>
-
         </activity>
     </application>
 

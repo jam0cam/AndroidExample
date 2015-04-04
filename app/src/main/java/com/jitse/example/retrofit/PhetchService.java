@@ -1,8 +1,10 @@
 package com.jitse.example.retrofit;
 
+import com.jitse.example.model.AsinStock;
+
 import java.util.List;
 
-import retrofit.http.GET;
+import retrofit.http.Body;
 import retrofit.http.POST;
 import rx.Observable;
 
@@ -11,5 +13,5 @@ import rx.Observable;
  */
 public interface PhetchService {
     @POST("/item/get/asinsByStockIds")
-    Observable<List<>> getAsinsByStockId(List<String> stockIds);
+    Observable<List<AsinStock>> getAsinsByStockId(@Body List<String> stockIds);
 }

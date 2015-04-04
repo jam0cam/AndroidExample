@@ -83,5 +83,6 @@
     <string name="title_activity_deep_link">DeepLinkActivity</string>
     <string name="my_dream_label">Example Day Dream</string>
     <string name="daydream_gender_pref_title">Product Gender</string>
+    <string name="title_activity_phetch">PhetchActivity</string>
 
 </resources>
