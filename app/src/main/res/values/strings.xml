@@ -84,5 +84,8 @@
     <string name="my_dream_label">Example Day Dream</string>
     <string name="daydream_gender_pref_title">Product Gender</string>
     <string name="title_activity_phetch">PhetchActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_authentication_test">AuthenticationTestActivity</string>
+    <string name="title_activity_checkout">CheckoutActivity</string>
 
 </resources>

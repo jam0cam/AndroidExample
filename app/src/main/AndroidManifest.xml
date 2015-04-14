@@ -6,6 +6,15 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
+    <!-- client authentication -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+
+    <!-- Authenticator -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+
     <application
         android:name=".ExampleApplication"
         android:allowBackup="true"
@@ -40,6 +49,15 @@
             <meta-data
                 android:name="android.service.dream"
                 android:resource="@xml/my_dream" />
+        </service>
+        <service android:name=".authentication.AuthService" >
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
         </service>
 
         <activity android:name=".daydream.MyDreamSettingsActivity" />
@@ -242,7 +260,6 @@
         <activity
             android:name=".activities.DeepLinkActivity"
             android:label="@string/title_activity_deep_link" >
-
             <intent-filter android:label="@string/title_activity_deep_link" >
                 <action android:name="android.intent.action.VIEW" />
 
@@ -258,11 +275,23 @@
         <activity
             android:name=".activities.PhetchActivity"
             android:label="@string/title_activity_phetch" >
+        </activity>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name=".activities.AuthenticationTestActivity"
+            android:label="@string/title_activity_authentication_test" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.CheckoutActivity"
+            android:label="@string/title_activity_checkout" >
         </activity>
     </application>
 
