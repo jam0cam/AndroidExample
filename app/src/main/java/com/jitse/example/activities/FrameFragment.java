@@ -1,15 +1,15 @@
 package com.jitse.example.activities;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.DialogInterface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.FrameLayout;
-import android.widget.RelativeLayout;
 
 import com.jitse.example.R;
 
@@ -21,10 +21,19 @@ import butterknife.InjectView;
  */
 public class FrameFragment extends DialogFragment {
 
+    public interface Listener {
+        void dismissed();
+    }
+
     private static final String TAG = FrameFragment.class.getName();
+
+
     @InjectView(R.id.fl_main)
     FrameLayout mFlMain;
+
+    private Listener mListener;
     private boolean alreadyMeasured = false;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -35,34 +44,10 @@ public class FrameFragment extends DialogFragment {
         return root;
     }
 
-    private void measureTest() {
-        Log.d(TAG, "Measuring");
-        RelativeLayout.LayoutParams mParams;
-        mParams = (RelativeLayout.LayoutParams) mFlMain.getLayoutParams();
-        mParams.height = mFlMain.getWidth();
-        mFlMain.setLayoutParams(mParams);
-        mFlMain.postInvalidate();
-    }
-
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-
-
-
-//
-//        mFlMain.getViewTreeObserver().addOnGlobalLayoutListener(new     ViewTreeObserver.OnGlobalLayoutListener() {
-//            public void onGlobalLayout() {
-//                if(alreadyMeasured)
-//                    mFlMain.getViewTreeObserver().removeGlobalOnLayoutListener(this);
-//                else {
-//                    measureTest();
-//                    alreadyMeasured = true;
-//                }
-//            }
-//        });
-
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        mListener = (Listener) activity;
     }
 
     @Override
@@ -72,9 +57,30 @@ public class FrameFragment extends DialogFragment {
         // request a window without the title
         dialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
 
-
-
         return dialog;
+    }
 
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        getDialog().getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+    }
+
+    @Override
+    public void onDismiss(DialogInterface dialog) {
+        super.onDismiss(dialog);
+
+        if (mListener != null) {
+            mListener.dismissed();
+        }
+    }
+
+    @Override
+    public void onCancel(DialogInterface dialog) {
+        super.onCancel(dialog);
+        if (mListener != null) {
+            mListener.dismissed();
+        }
     }
 }

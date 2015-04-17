@@ -68,6 +68,10 @@
         <activity
             android:name=".activities.DialogFragmentActivity"
             android:label="@string/title_activity_dialog_fragment" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".activities.NotificationActivity"
@@ -283,15 +287,14 @@
         <activity
             android:name=".activities.AuthenticationTestActivity"
             android:label="@string/title_activity_authentication_test" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".activities.CheckoutActivity"
             android:label="@string/title_activity_checkout" >
+        </activity>
+        <activity
+            android:name=".activities.DimensionRevealActivity"
+            android:label="@string/title_activity_dimension_reveal" >
         </activity>
     </application>
 
