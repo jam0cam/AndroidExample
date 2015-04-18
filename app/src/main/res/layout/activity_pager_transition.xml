@@ -13,31 +13,6 @@
         android:orientation="vertical"
         >
 
-        <FrameLayout
-            android:id="@+id/ll"
-            android:layout_width="match_parent"
-            android:layout_height="300dp">
-            <android.support.v4.view.ViewPager
-                android:id="@+id/mViewPager"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:overScrollMode="never"
-                android:visibility="gone"
-                />
-            <ImageView
-                android:id="@+id/image_view"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:transitionName="tpi"
-                />
-        </FrameLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:background="@color/light_gray"
-            />
-
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_similar_items"
             android:layout_width="match_parent"
@@ -49,6 +24,13 @@
             android:paddingRight="@dimen/default_outter_padding"
             >
         </android.support.v7.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:transitionName="tpi"
+            />
 
     </LinearLayout>
 

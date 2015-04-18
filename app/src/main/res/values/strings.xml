@@ -88,5 +88,6 @@
     <string name="title_activity_authentication_test">AuthenticationTestActivity</string>
     <string name="title_activity_checkout">CheckoutActivity</string>
     <string name="title_activity_dimension_reveal">DimensionRevealActivity</string>
+    <string name="title_activity_pager">PagerActivity</string>
 
 </resources>
