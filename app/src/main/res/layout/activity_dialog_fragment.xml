@@ -1,11 +1,10 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    tools:context="com.jitse.example.activities.DialogFragmentActivity"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_light"
     >
-
 
     <ImageButton
         android:id="@+id/fab"
@@ -19,6 +18,4 @@
         android:stateListAnimator="@anim/button_elevation"
         android:elevation="@dimen/elevation_high"
         />
-
-
 </FrameLayout>

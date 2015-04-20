@@ -68,6 +68,10 @@
         <activity
             android:name=".activities.DialogFragmentActivity"
             android:label="@string/title_activity_dialog_fragment" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".activities.NotificationActivity"
@@ -156,11 +160,6 @@
         <activity
             android:name=".activities.PagerTransitionActivity"
             android:label="@string/title_activity_pager_transition" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".activities.WebviewActivity"
