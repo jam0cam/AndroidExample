@@ -89,5 +89,9 @@
     <string name="title_activity_checkout">CheckoutActivity</string>
     <string name="title_activity_dimension_reveal">DimensionRevealActivity</string>
     <string name="title_activity_pager">PagerActivity</string>
+    <string name="title_activity_glide">GlideActivity</string>
+    <string name="title_activity_picasso">PicassoActivity</string>
+    <string name="title_activity_data_binding">DataBindingActivity</string>
+    <string name="title_activity_adc_notification">AdcNotificationActivity</string>
 
 </resources>

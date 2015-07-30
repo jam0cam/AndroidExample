@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 import com.jitse.example.R;
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 
@@ -45,7 +46,12 @@ public class PagerActivity extends ActionBarActivity implements ProductPagerAdap
         postponeEnterTransition();
         ButterKnife.inject(this);
 
+
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this)
+                .build();
+
         mImageLoader = ImageLoader.getInstance();
+        mImageLoader.init(config);
 
         ProductPagerAdapter mPagerAdapter = new ProductPagerAdapter(Arrays.asList(urls), mImageLoader, this);
             mViewPager.setAdapter(mPagerAdapter);

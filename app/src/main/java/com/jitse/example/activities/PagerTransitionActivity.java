@@ -77,6 +77,4 @@ public class PagerTransitionActivity extends ActionBarActivity {
 
         startActivity(intent, options.toBundle());
     }
-
-
 }

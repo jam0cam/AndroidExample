@@ -65,14 +65,7 @@
             android:name=".activities.FrameLayoutActivity"
             android:label="@string/title_activity_frame_layout" >
         </activity>
-        <activity
-            android:name=".activities.DialogFragmentActivity"
-            android:label="@string/title_activity_dialog_fragment" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".activities.DialogFragmentActivity" />
         <activity
             android:name=".activities.NotificationActivity"
             android:label="@string/title_activity_notification" >
@@ -299,6 +292,28 @@
         <activity
             android:name=".activities.PagerActivity"
             android:label="@string/title_activity_pager" >
+
+        </activity>
+        <activity
+            android:name=".activities.GlideActivity"
+            android:label="@string/title_activity_glide" >
+        </activity>
+        <activity
+            android:name=".activities.PicassoActivity"
+            android:label="@string/title_activity_picasso" >
+        </activity>
+        <activity
+            android:name=".activities.DataBindingActivity"
+            android:label="@string/title_activity_data_binding" >
+        </activity>
+        <activity
+            android:name=".activities.AdcNotificationActivity"
+            android:label="@string/title_activity_adc_notification" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
