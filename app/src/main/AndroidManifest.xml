@@ -15,19 +15,20 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
 
-    <!-- for wifi direct / nsd / p2p-->
+    <!-- for wifi direct / nsd / p2p -->
     <uses-permission
-        android:required="true"
-        android:name="android.permission.ACCESS_WIFI_STATE"/>
+        android:name="android.permission.ACCESS_WIFI_STATE"
+        android:required="true" />
     <uses-permission
-        android:required="true"
-        android:name="android.permission.CHANGE_WIFI_STATE"/>
-
+        android:name="android.permission.CHANGE_WIFI_STATE"
+        android:required="true" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <!-- Google Play filtering -->
-    <uses-feature android:name="android.hardware.wifi.direct" android:required="true"/>
+    <uses-feature
+        android:name="android.hardware.wifi.direct"
+        android:required="true" />
 
     <application
         android:name=".ExampleApplication"
@@ -326,6 +327,10 @@
         <activity
             android:name=".activities.P2pNsdActivity"
             android:label="@string/title_activity_p2p_nsd" >
+        </activity>
+        <activity
+            android:name=".activities.NsdActivity"
+            android:label="@string/title_activity_nsd" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
