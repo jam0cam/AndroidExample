@@ -95,5 +95,6 @@
     <string name="title_activity_adc_notification">AdcNotificationActivity</string>
     <string name="title_activity_p2p_nsd">P2pNsdActivity</string>
     <string name="title_activity_nsd">NsdActivity</string>
+    <string name="title_activity_bluetooth">BluetoothActivity</string>
 
 </resources>
