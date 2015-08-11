@@ -1,6 +1,13 @@
 package com.jitse.example.retrofit;
 
+import android.databinding.BaseObservable;
+import android.databinding.Bindable;
+import android.text.Editable;
+import android.text.TextWatcher;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.jitse.example.BR;
+import com.jitse.example.views.SimpleTextWatcher;
 
 import java.util.List;
 
@@ -8,15 +15,21 @@ import java.util.List;
  * Created by jitse on 11/5/14.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Product extends JsonIgnorable {
+public class Product extends BaseObservable {
     public String onSale;
     public Review reviews;
     public String description;
     public String defaultProductType;
     public List<Style> styles;
     public List<String> genders;
+
+    @Bindable
     public String productName;
+
+    @Bindable
     public String brandName;
+
+    @Bindable
     public String defaultImageUrl;
     public String productId;
 
@@ -74,6 +87,7 @@ public class Product extends JsonIgnorable {
 
     public void setProductName(String productName) {
         this.productName = productName;
+        notifyPropertyChanged(BR.productName);
     }
 
     public String getBrandName() {
@@ -82,6 +96,7 @@ public class Product extends JsonIgnorable {
 
     public void setBrandName(String brandName) {
         this.brandName = brandName;
+        notifyPropertyChanged(BR.brandName);
     }
 
     public String getDefaultImageUrl() {
@@ -90,6 +105,7 @@ public class Product extends JsonIgnorable {
 
     public void setDefaultImageUrl(String defaultImageUrl) {
         this.defaultImageUrl = defaultImageUrl;
+        notifyPropertyChanged(BR.defaultImageUrl);
     }
 
     public String getProductId() {
@@ -98,5 +114,15 @@ public class Product extends JsonIgnorable {
 
     public void setProductId(String productId) {
         this.productId = productId;
+    }
+
+    public TextWatcher getProductNameTextWatcher() {
+        return new SimpleTextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                super.afterTextChanged(s);
+                setProductName(s.toString());
+            }
+        };
     }
 }

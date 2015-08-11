@@ -323,6 +323,10 @@
         <activity
             android:name=".activities.DataBindingActivity"
             android:label="@string/title_activity_data_binding" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".activities.AdcNotificationActivity"
@@ -339,10 +343,7 @@
         <activity
             android:name=".activities.BluetoothActivity"
             android:label="@string/title_activity_bluetooth" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
     </application>
 
