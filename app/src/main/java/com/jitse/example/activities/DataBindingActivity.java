@@ -23,7 +23,7 @@ import rx.schedulers.Schedulers;
 
 public class DataBindingActivity extends ActionBarActivity {
 
-    private static final String TAG = DataBindingActivity.class.getsim;
+    private static final String TAG = DataBindingActivity.class.getSimpleName();
     @InjectView(R.id.brand)
     EditText mBrand;
 

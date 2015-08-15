@@ -20,6 +20,8 @@
     <string name="title_activity_image_transition1">ImageTransition1Activity</string>
     <string name="title_activity_image_transition2">ImageTransition2Activity</string>
 
+    <string name="google_api_key">AIzaSyArTaNV7tgRxHX5kJESGvkjFtBP5AGutQw</string>
+
     <string-array name="images_list">
         <item>http://www.zappos.com/images/z/2/7/2/7/3/6/2727366-p-MULTIVIEW.jpg</item>
         <item>http://www.zappos.com/images/z/2/7/4/4/0/0/2744001-p-MULTIVIEW.jpg</item>
@@ -96,5 +98,6 @@
     <string name="title_activity_p2p_nsd">P2pNsdActivity</string>
     <string name="title_activity_nsd">NsdActivity</string>
     <string name="title_activity_bluetooth">BluetoothActivity</string>
+    <string name="title_activity_nearby_beacon">NearbyBeaconActivity</string>
 
 </resources>
