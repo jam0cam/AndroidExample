@@ -99,5 +99,6 @@
     <string name="title_activity_nsd">NsdActivity</string>
     <string name="title_activity_bluetooth">BluetoothActivity</string>
     <string name="title_activity_nearby_beacon">NearbyBeaconActivity</string>
+    <string name="title_activity_nfc">NfcActivity</string>
 
 </resources>
