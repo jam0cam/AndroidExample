@@ -100,5 +100,6 @@
     <string name="title_activity_bluetooth">BluetoothActivity</string>
     <string name="title_activity_nearby_beacon">NearbyBeaconActivity</string>
     <string name="title_activity_nfc">NfcActivity</string>
+    <string name="title_activity_background">BackgroundActivity</string>
 
 </resources>
