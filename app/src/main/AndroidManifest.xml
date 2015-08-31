@@ -350,7 +350,6 @@
         <activity
             android:name=".activities.NfcActivity"
             android:label="@string/title_activity_nfc" >
-
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
 
@@ -362,8 +361,14 @@
         <activity
             android:name=".activities.BackgroundActivity"
             android:label="@string/title_activity_background" >
+
+        </activity>
+        <activity
+            android:name=".activities.MenuActivity"
+            android:label="@string/title_activity_menu" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
