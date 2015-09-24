@@ -6,7 +6,9 @@ buildscript {
         maven { url 'http://download.crashlytics.com/maven' }
         maven { url 'https://maven.fabric.io/public' }
         mavenCentral()
-        jcenter()
+        jcenter {
+            url "http://jcenter.bintray.com/"
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.2.3'

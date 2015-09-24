@@ -361,11 +361,13 @@
         <activity
             android:name=".activities.BackgroundActivity"
             android:label="@string/title_activity_background" >
-
         </activity>
         <activity
             android:name=".activities.MenuActivity"
             android:label="@string/title_activity_menu" >
+
+        </activity>
+        <activity android:name=".activities.RainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.jitse.example.activities.RainActivity"
+    android:background="@color/light_green"
+    >
+
+    <View
+        android:id="@+id/view_top_left"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@color/red"
+        android:layout_gravity="top|left"
+    />
+    <View
+        android:id="@+id/view_top_right"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@color/green"
+        android:layout_gravity="top|right"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        >
+        <Button
+            android:id="@+id/btn_red_dots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Red Dots"
+            />
+        <Button
+            android:id="@+id/btn_emit_beans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TOGGLE Beans ON"
+            />
+        <Button
+            android:id="@+id/btn_emit_flakes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TOGGLE Snow Flakes ON"
+            />
+        <Button
+            android:id="@+id/btn_santa_run"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Santa Run"
+            />
+        <Button
+            android:id="@+id/btn_emit_shoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shoe Explosion"
+            />
+    </LinearLayout>
+</FrameLayout>
