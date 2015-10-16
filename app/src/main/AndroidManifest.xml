@@ -31,7 +31,6 @@
     <uses-feature
         android:name="android.hardware.wifi.direct"
         android:required="true" />
-
     <uses-feature
         android:name="android.hardware.sensor.accelerometer"
         android:required="true" />
@@ -46,6 +45,11 @@
         <meta-data
             android:name="com.google.android.nearby.messages.API_KEY"
             android:value="@string/google_api_key" />
+
+        <!-- Enables the Android Pay API -->
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
 
         <activity
             android:name=".activities.MyActivity"
@@ -368,14 +372,19 @@
         <activity
             android:name=".activities.MenuActivity"
             android:label="@string/title_activity_menu" >
-
         </activity>
         <activity android:name=".activities.RainActivity" >
+        </activity>
+        <activity android:name=".activities.AndroidPayActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".activities.AndroidPayConfirmationActivity" >
+        </activity>
+        <activity android:name=".activities.AndroidPayCompleteActivity" >
         </activity>
     </application>
 

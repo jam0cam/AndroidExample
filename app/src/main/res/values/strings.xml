@@ -21,7 +21,7 @@
     <string name="title_activity_image_transition2">ImageTransition2Activity</string>
 
     <string name="google_api_key">AIzaSyArTaNV7tgRxHX5kJESGvkjFtBP5AGutQw</string>
-
+    <string name="google_oauth_client_id">606008763304-04cenr08l51d54vuq2up7j9hc1ostd78.apps.googleusercontent.com</string>
     <string-array name="images_list">
         <item>http://www.zappos.com/images/z/2/7/2/7/3/6/2727366-p-MULTIVIEW.jpg</item>
         <item>http://www.zappos.com/images/z/2/7/4/4/0/0/2744001-p-MULTIVIEW.jpg</item>
@@ -102,5 +102,10 @@
     <string name="title_activity_nfc">NfcActivity</string>
     <string name="title_activity_background">BackgroundActivity</string>
     <string name="title_activity_menu">MenuActivity</string>
+    <string name="spending_limit_exceeded">You have exceeded your spending limit</string>
+    <string name="google_wallet_unavailable">Google Wallet is unavailable</string>
+    <string name="error_code">Error code: %d</string>
+    <string name="confirm_order">Confirm Order</string>
+    <string name="loading">Loading&#8230;</string>
 
 </resources>
