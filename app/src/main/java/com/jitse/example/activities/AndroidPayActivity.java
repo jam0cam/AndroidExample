@@ -91,7 +91,7 @@ public class AndroidPayActivity extends Activity {
         WalletFragmentInitParams.Builder startParamsBuilder = WalletFragmentInitParams.newBuilder()
                 .setMaskedWalletRequest(maskedWalletRequest)
                 .setMaskedWalletRequestCode(Constants.REQUEST_CODE_MASKED_WALLET)
-                .setAccountName(accountName);
+                .setAccountName("test");
         mWalletFragment.initialize(startParamsBuilder.build());
 
         // add Wallet fragment to the UI
@@ -109,16 +109,16 @@ public class AndroidPayActivity extends Activity {
                 .setCurrencyCode(Constants.CURRENCY_CODE_USD)
                 .setDescription("Nike Shoe")
                 .setQuantity("1")
-                .setUnitPrice("5.00")
-                .setTotalPrice("5.12")
+                .setUnitPrice("523.00")
+                .setTotalPrice("5233.12")
                 .build());
 
 
         // Calculate the cart total by iterating over the line items.
-        String cartTotal = "5.12";
+        String cartTotal = "53.12";
 
         MaskedWalletRequest.Builder builder = MaskedWalletRequest.newBuilder()
-                .setMerchantName(Constants.MERCHANT_NAME)
+                .setMerchantName("Test")
                 .setPhoneNumberRequired(true)
                 .setShippingAddressRequired(true)
                 .setCurrencyCode(Constants.CURRENCY_CODE_USD)

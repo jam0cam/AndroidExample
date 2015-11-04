@@ -4,9 +4,13 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.wallet.MaskedWallet;
+import com.google.android.gms.wallet.Wallet;
 import com.google.android.gms.wallet.WalletConstants;
 import com.google.android.gms.wallet.fragment.WalletFragment;
 import com.google.android.gms.wallet.fragment.WalletFragmentInitParams;
@@ -17,9 +21,16 @@ import com.jitse.example.Constants;
 import com.jitse.example.R;
 import com.jitse.example.fragments.FullWalletConfirmationButtonFragment;
 
-public class AndroidPayConfirmationActivity extends Activity {
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+public class AndroidPayConfirmationActivity extends Activity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+    private static final String TAG = AndroidPayConfirmationActivity.class.getName();
+
     private WalletFragment mWalletFragment;
     private MaskedWallet mMaskedWallet;
+
+    protected GoogleApiClient mGoogleApiClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +38,35 @@ public class AndroidPayConfirmationActivity extends Activity {
         setContentView(R.layout.activity_android_pay_confirmation);
         mMaskedWallet = getIntent().getParcelableExtra(Constants.EXTRA_MASKED_WALLET);
         createAndAddWalletFragment();
+        setupGoogleApiClient();
+        ButterKnife.inject(this);
+    }
 
+    private void setupGoogleApiClient() {
+        // Set up an API client;
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .setAccountName(Constants.ACCOUNT_NAME)
+                .addApi(Wallet.API, new Wallet.WalletOptions.Builder()
+                        .setEnvironment(Constants.WALLET_ENVIRONMENT)
+                        .setTheme(WalletConstants.THEME_HOLO_LIGHT)
+                        .build())
+                .build();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        mGoogleApiClient.connect();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        mGoogleApiClient.disconnect();
     }
 
     private void createAndAddWalletFragment() {
@@ -114,6 +153,28 @@ public class AndroidPayConfirmationActivity extends Activity {
                 Toast.makeText(this, errorMessage, Toast.LENGTH_LONG).show();
                 break;
         }
+    }
+
+    @OnClick(R.id.btn_change)
+    public void change() {
+        Log.d(TAG, "change");
+
+        Wallet.changeMaskedWallet(mGoogleApiClient, mMaskedWallet.getGoogleTransactionId(), mMaskedWallet.getMerchantTransactionId(), Constants.REQUEST_CODE_CHANGE_MASKED_WALLET);
+    }
+
+    @Override
+    public void onConnected(Bundle bundle) {
+
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+
     }
 }
 
