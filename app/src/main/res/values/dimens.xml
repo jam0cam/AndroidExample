@@ -24,5 +24,6 @@
     <dimen name="bikestore_button_min_width">48dp</dimen>
     <dimen name="bikestore_button_max_width">64dp</dimen>
     <dimen name="bikestore_button_text">18sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 
 </resources>

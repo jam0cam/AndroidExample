@@ -376,15 +376,20 @@
         <activity android:name=".activities.RainActivity" >
         </activity>
         <activity android:name=".activities.AndroidPayActivity" >
+        </activity>
+        <activity android:name=".activities.AndroidPayConfirmationActivity" >
+        </activity>
+        <activity android:name=".activities.AndroidPayCompleteActivity" >
+        </activity>
+        <activity
+            android:name=".activities.SmartLockActivity"
+            android:label="@string/title_activity_smart_lock"
+            android:theme="@style/MyTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".activities.AndroidPayConfirmationActivity" >
-        </activity>
-        <activity android:name=".activities.AndroidPayCompleteActivity" >
         </activity>
     </application>
 

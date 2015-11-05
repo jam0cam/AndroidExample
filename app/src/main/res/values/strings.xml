@@ -107,5 +107,6 @@
     <string name="error_code">Error code: %d</string>
     <string name="confirm_order">Confirm Order</string>
     <string name="loading">Loading&#8230;</string>
+    <string name="title_activity_smart_lock">SmartLockActivity</string>
 
 </resources>
