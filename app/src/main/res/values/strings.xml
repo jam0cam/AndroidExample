@@ -108,5 +108,11 @@
     <string name="confirm_order">Confirm Order</string>
     <string name="loading">Loading&#8230;</string>
     <string name="title_activity_smart_lock">SmartLockActivity</string>
-
+    <string name="title_activity_finger_print">FingerPrintActivity</string>
+    <string name="fingerprint_not_recognized">Fingerprint not recognized. Try again</string>
+    <string name="fingerprint_success">Fingerprint recognized</string>
+    <string name="fingerprint_hint">Touch sensor</string>
+    <string name="fingerprint_description">Confirm fingerprint to continue</string>
+    <string name="sign_in">Sign in</string>
+    <string name="cancel">Cancel</string>
 </resources>
