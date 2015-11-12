@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jitse.example"
     android:versionCode="1"
-    android:versionName="1.0"
-    >
+    android:versionName="1.0" >
 
     <!-- For bluetooth -->
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -30,8 +29,7 @@
         android:required="true" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
     <!-- Google Play filtering -->
     <uses-feature
@@ -391,16 +389,18 @@
             android:name=".activities.SmartLockActivity"
             android:label="@string/title_activity_smart_lock"
             android:theme="@style/MyTheme" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity
             android:name=".activities.FingerPrintActivity"
             android:label="@string/title_activity_finger_print"
             android:theme="@style/MyTheme" >
-
+        </activity>
+        <activity android:name=".activities.RulerActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
