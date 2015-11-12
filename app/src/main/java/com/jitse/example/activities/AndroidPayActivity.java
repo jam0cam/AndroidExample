@@ -77,7 +77,7 @@ public class AndroidPayActivity extends Activity {
                 .setBuyButtonWidth(Dimension.MATCH_PARENT);
 
         WalletFragmentOptions walletFragmentOptions = WalletFragmentOptions.newBuilder()
-                .setEnvironment(WalletConstants.ENVIRONMENT_SANDBOX)
+                .setEnvironment(Constants.WALLET_ENVIRONMENT)
                 .setFragmentStyle(walletFragmentStyle)
                 .setTheme(WalletConstants.THEME_LIGHT)
                 .setMode(WalletFragmentMode.BUY_BUTTON)
