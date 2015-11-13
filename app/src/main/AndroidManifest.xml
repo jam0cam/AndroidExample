@@ -389,7 +389,6 @@
             android:name=".activities.SmartLockActivity"
             android:label="@string/title_activity_smart_lock"
             android:theme="@style/MyTheme" >
-
         </activity>
         <activity
             android:name=".activities.FingerPrintActivity"
@@ -397,6 +396,8 @@
             android:theme="@style/MyTheme" >
         </activity>
         <activity android:name=".activities.RulerActivity" >
+        </activity>
+        <activity android:name=".fireworks.FireworksActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
