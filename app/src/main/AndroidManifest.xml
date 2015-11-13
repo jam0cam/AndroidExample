@@ -398,6 +398,8 @@
         <activity android:name=".activities.RulerActivity" >
         </activity>
         <activity android:name=".fireworks.FireworksActivity" >
+        </activity>
+        <activity android:name=".fireworks.FireWorks2Activity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
