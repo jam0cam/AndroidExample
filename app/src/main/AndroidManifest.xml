@@ -400,12 +400,15 @@
         <activity android:name=".fireworks.FireworksActivity" >
         </activity>
         <activity android:name=".fireworks.FireWorks2Activity" >
-
         </activity>
         <activity android:name=".activities.ChronometerActivity" >
+        </activity>
+        <activity
+            android:name=".activities.UberActivity"
+            android:label="@string/title_activity_uber"
+            android:theme="@style/MyTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

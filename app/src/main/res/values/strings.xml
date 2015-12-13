@@ -115,4 +115,5 @@
     <string name="fingerprint_description">Confirm fingerprint to continue</string>
     <string name="sign_in">Sign in</string>
     <string name="cancel">Cancel</string>
+    <string name="title_activity_uber">UberActivity</string>
 </resources>
