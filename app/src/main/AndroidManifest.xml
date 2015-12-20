@@ -341,11 +341,6 @@
         <activity
             android:name="com.branchmetrics.Main2Activity"
             android:label="@string/title_activity_main2">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name="com.branchmetrics.Branch2Activity">
             <intent-filter>
@@ -359,11 +354,15 @@
                 <category android:name="android.intent.category.BROWSABLE" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.ViewPagerActivity" />
         <activity
-            android:name=".activities.BlankActivity"
-            android:label="@string/title_activity_blank"
-            android:theme="@style/MyTheme"></activity>
+            android:name=".activities.ViewPagerActivity"
+            android:label="@string/title_activity_view_pager"
+            android:theme="@style/MyTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
