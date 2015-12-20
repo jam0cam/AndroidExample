@@ -1,7 +1,6 @@
 <resources>
 
-    <style name="MyTheme" parent="Theme.AppCompat.Light.NoActionBar">
-    </style>
+    <style name="MyTheme" parent="Theme.AppCompat.Light.NoActionBar"></style>
 
 
     <!-- Base application theme. -->
@@ -10,6 +9,7 @@
         <item name="android:paddingBottom">16dp</item>
         <item name="android:textColor">@color/dark_gray</item>
     </style>
+
     <style name="ProductText" parent="@android:style/TextAppearance">
         <item name="android:textColor">@color/black</item>
     </style>
@@ -25,8 +25,7 @@
         <item name="android:textStyle">normal</item>
     </style>
 
-    <style name="BikestoreWalletFragmentDetailsHeaderTextAppearance"
-        parent="BikestoreWalletFragmentDetailsTextAppearance">
+    <style name="BikestoreWalletFragmentDetailsHeaderTextAppearance" parent="BikestoreWalletFragmentDetailsTextAppearance">
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -36,7 +35,9 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">@dimen/bikestore_button_text</item>
     </style>
+
     <style name="MyTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <style name="MyTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

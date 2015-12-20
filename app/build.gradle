@@ -5,6 +5,13 @@ apply plugin: 'io.fabric'
 apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'com.android.databinding'
 
+
+repositories {
+    mavenCentral()
+    maven { url 'http://maven.mparticle.com' }
+}
+
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
@@ -64,4 +71,7 @@ dependencies {
     compile 'com.plattysoft.leonids:LeonidsLib:1.3.1'
     compile 'com.android.support:design:23.1.0'
     compile 'org.altbeacon:android-beacon-library:2.+'
+
+    compile 'com.mparticle:android-branch-kit:4.+'
+    compile 'com.mparticle:android-core:4.+'
 }

@@ -21,6 +21,7 @@ import javax.net.ssl.SSLSession;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
+import io.branch.referral.Branch;
 import io.fabric.sdk.android.Fabric;
 import retrofit.RequestInterceptor;
 import retrofit.RestAdapter;
@@ -49,6 +50,7 @@ public class ExampleApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Branch.getAutoInstance(this);
         TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
         Fabric.with(this, new Twitter(authConfig));
         try {

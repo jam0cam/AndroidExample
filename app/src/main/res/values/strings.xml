@@ -116,4 +116,7 @@
     <string name="sign_in">Sign in</string>
     <string name="cancel">Cancel</string>
     <string name="title_activity_uber">UberActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="bm_key">key_live_lnoT5Efb1NKfeF2cB87LiheiuAmGFCmX</string>
+    <string name="title_activity_blank">BlankActivity</string>
 </resources>

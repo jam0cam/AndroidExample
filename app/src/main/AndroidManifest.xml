@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jitse.example"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <!-- For bluetooth -->
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -11,7 +11,6 @@
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
@@ -48,7 +47,10 @@
         android:hardwareAccelerated="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/MyTheme" >
+        android:theme="@style/MyTheme">
+        <meta-data
+            android:name="io.branch.sdk.BranchKey"
+            android:value="@string/bm_key" />
         <meta-data
             android:name="com.google.android.nearby.messages.API_KEY"
             android:value="@string/google_api_key" />
@@ -60,21 +62,18 @@
 
         <activity
             android:name=".activities.MyActivity"
-            android:label="@string/app_name" >
-        </activity>
-        <activity android:name=".activities.RatioActivity" >
-        </activity>
+            android:label="@string/app_name" />
+        <activity android:name=".activities.RatioActivity" />
 
         <service
             android:name=".service.MyService"
-            android:label="MyService" >
-        </service>
+            android:label="MyService" />
         <service
             android:name=".daydream.MyDream"
             android:exported="true"
             android:icon="@drawable/ic_launcher"
             android:label="@string/my_dream_label"
-            android:permission="android.permission.BIND_DREAM_SERVICE" >
+            android:permission="android.permission.BIND_DREAM_SERVICE">
             <intent-filter>
                 <action android:name="android.service.dreams.DreamService" />
 
@@ -86,7 +85,7 @@
                 android:name="android.service.dream"
                 android:resource="@xml/my_dream" />
         </service>
-        <service android:name=".authentication.AuthService" >
+        <service android:name=".authentication.AuthService">
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />
             </intent-filter>
@@ -99,144 +98,110 @@
         <activity android:name=".daydream.MyDreamSettingsActivity" />
         <activity
             android:name=".activities.FrameLayoutActivity"
-            android:label="@string/title_activity_frame_layout" >
-        </activity>
+            android:label="@string/title_activity_frame_layout" />
         <activity android:name=".activities.DialogFragmentActivity" />
         <activity
             android:name=".activities.NotificationActivity"
-            android:label="@string/title_activity_notification" >
-        </activity>
+            android:label="@string/title_activity_notification" />
         <activity
             android:name=".activities.NotificationResultActivity"
-            android:label="@string/title_activity_notification_result" >
-        </activity>
+            android:label="@string/title_activity_notification_result" />
         <activity
             android:name=".activities.BarcodeActivity"
-            android:label="@string/title_activity_barcode" >
-        </activity>
+            android:label="@string/title_activity_barcode" />
         <activity
             android:name=".activities.CircularActivity"
-            android:label="@string/title_activity_circular" >
-        </activity>
+            android:label="@string/title_activity_circular" />
         <activity
             android:name=".activities.RecyclerViewActivity"
-            android:label="@string/title_activity_cards" >
-        </activity>
+            android:label="@string/title_activity_cards" />
         <activity
             android:name=".activities.RetrofitActivity"
-            android:label="@string/title_activity_retrofit" >
-        </activity>
+            android:label="@string/title_activity_retrofit" />
         <activity
             android:name=".intern.MainActivity"
-            android:label="@string/title_activity_main" >
-        </activity>
+            android:label="@string/title_activity_main" />
         <activity
             android:name=".intern.HeroActivity"
-            android:label="@string/title_activity_hero" >
-        </activity>
+            android:label="@string/title_activity_hero" />
         <activity
             android:name=".transition.ImageTransition1Activity"
-            android:label="@string/title_activity_image_transition1" >
-        </activity>
+            android:label="@string/title_activity_image_transition1" />
         <activity
             android:name=".transition.ImageTransition2Activity"
-            android:label="@string/title_activity_image_transition2" >
-        </activity>
+            android:label="@string/title_activity_image_transition2" />
         <activity
             android:name=".activities.RippleActivity"
-            android:label="@string/title_activity_ripple" >
-        </activity>
+            android:label="@string/title_activity_ripple" />
         <activity
             android:name=".activities.JacksonActivity"
-            android:label="@string/title_activity_jackson" >
-        </activity>
+            android:label="@string/title_activity_jackson" />
         <activity
             android:name=".activities.HorizontalListViewActivity"
-            android:label="@string/title_activity_horizontal_list_view" >
-        </activity>
+            android:label="@string/title_activity_horizontal_list_view" />
         <activity
             android:name=".zappos.ProductActivity"
-            android:label="@string/title_activity_product" >
-        </activity>
+            android:label="@string/title_activity_product" />
         <activity
             android:name=".activities.GooglePlusActivity"
-            android:label="@string/title_activity_google_plus" >
-        </activity>
+            android:label="@string/title_activity_google_plus" />
         <activity
             android:name=".activities.CardActivity"
-            android:label="@string/title_activity_card" >
-        </activity>
+            android:label="@string/title_activity_card" />
         <activity
             android:name=".transition.ImageScrollTransition"
-            android:label="@string/title_activity_image_scroll_transition" >
-        </activity>
+            android:label="@string/title_activity_image_scroll_transition" />
         <activity
             android:name=".activities.AnimationActivity"
-            android:label="@string/title_activity_animation" >
-        </activity>
+            android:label="@string/title_activity_animation" />
         <activity
             android:name=".activities.RevealActivity"
-            android:label="@string/title_activity_reveal" >
-        </activity>
+            android:label="@string/title_activity_reveal" />
         <activity
             android:name=".activities.TintActivity"
-            android:label="@string/title_activity_tint" >
-        </activity>
+            android:label="@string/title_activity_tint" />
         <activity
             android:name=".activities.ToolbarActivity"
-            android:label="@string/title_activity_toolbar" >
-        </activity>
+            android:label="@string/title_activity_toolbar" />
         <activity
             android:name=".activities.PagerTransitionActivity"
-            android:label="@string/title_activity_pager_transition" >
-        </activity>
+            android:label="@string/title_activity_pager_transition" />
         <activity
             android:name=".activities.WebviewActivity"
-            android:label="@string/title_activity_webview" >
-        </activity>
+            android:label="@string/title_activity_webview" />
         <activity
             android:name=".activities.FragmentRevealActivity"
-            android:label="@string/title_activity_fragment_reveal" >
-        </activity>
+            android:label="@string/title_activity_fragment_reveal" />
         <activity
             android:name=".activities.ImageActivity"
-            android:label="@string/title_activity_image" >
-        </activity>
+            android:label="@string/title_activity_image" />
         <activity
             android:name=".activities.MultipleListViewActivity"
-            android:label="@string/title_activity_multiple_list_view" >
-        </activity>
+            android:label="@string/title_activity_multiple_list_view" />
         <activity
             android:name=".activities.AlarmActivity"
-            android:label="@string/title_activity_alarm" >
-        </activity>
+            android:label="@string/title_activity_alarm" />
 
         <receiver android:name=".receivers.AlarmReceiver" />
 
         <activity
             android:name=".activities.AlbumActivity"
-            android:label="@string/title_activity_album" >
-        </activity>
+            android:label="@string/title_activity_album" />
         <activity
             android:name=".activities.PictureActivity"
-            android:label="@string/title_activity_picture" >
-        </activity>
+            android:label="@string/title_activity_picture" />
         <activity
             android:name=".activities.HtmlActivity"
-            android:label="@string/title_activity_html" >
-        </activity>
+            android:label="@string/title_activity_html" />
         <activity
             android:name=".StateListActivity"
-            android:label="@string/title_activity_state_list" >
-        </activity>
+            android:label="@string/title_activity_state_list" />
         <activity
             android:name=".activities.SpinnerActivity"
-            android:label="@string/title_activity_spinner" >
-        </activity>
+            android:label="@string/title_activity_spinner" />
         <activity
             android:name=".activities.TwitterActivity"
-            android:label="@string/title_activity_twitter" >
-        </activity>
+            android:label="@string/title_activity_twitter" />
 
         <meta-data
             android:name="com.crashlytics.ApiKey"
@@ -244,56 +209,44 @@
 
         <activity
             android:name=".activities.FabActivity"
-            android:label="@string/title_activity_fab" >
-        </activity>
+            android:label="@string/title_activity_fab" />
         <activity
             android:name=".activities.CircularFabActivity"
-            android:label="@string/title_activity_circular_fab" >
-        </activity>
+            android:label="@string/title_activity_circular_fab" />
         <activity
             android:name=".activities.ImmersiveActivity"
-            android:label="@string/title_activity_immersive" >
-        </activity>
+            android:label="@string/title_activity_immersive" />
         <activity
             android:name=".activities.TestActivity"
-            android:label="@string/title_activity_test" >
-        </activity>
+            android:label="@string/title_activity_test" />
         <activity
             android:name=".activities.SimpleSceneTransitionActivity"
-            android:label="@string/title_activity_scene_transition" >
-        </activity>
+            android:label="@string/title_activity_scene_transition" />
         <activity
             android:name=".activities.PicassoSceneTransitionActivity"
-            android:label="@string/title_activity_complex_scene_transition" >
-        </activity>
+            android:label="@string/title_activity_complex_scene_transition" />
         <activity
             android:name=".activities.MasterTransitionActivity"
-            android:label="@string/title_activity_master_detail_transition" >
-        </activity>
+            android:label="@string/title_activity_master_detail_transition" />
         <activity
             android:name=".activities.DetailActivity"
-            android:label="@string/title_activity_detail" >
-        </activity>
+            android:label="@string/title_activity_detail" />
         <activity
             android:name=".activities.RxActivity"
-            android:label="@string/title_activity_rx" >
-        </activity>
+            android:label="@string/title_activity_rx" />
         <activity
             android:name=".activities.RxJavaActivity"
-            android:label="@string/title_activity_product" >
-        </activity>
+            android:label="@string/title_activity_product" />
         <activity
             android:name=".activities.DialogRevealActivity"
-            android:label="@string/title_activity_dialog_reveal" >
-        </activity>
+            android:label="@string/title_activity_dialog_reveal" />
         <activity
             android:name=".activities.VideoActivity"
-            android:label="@string/title_activity_video" >
-        </activity>
+            android:label="@string/title_activity_video" />
         <activity
             android:name=".activities.DeepLinkActivity"
-            android:label="@string/title_activity_deep_link" >
-            <intent-filter android:label="@string/title_activity_deep_link" >
+            android:label="@string/title_activity_deep_link">
+            <intent-filter android:label="@string/title_activity_deep_link">
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
@@ -307,63 +260,49 @@
         </activity>
         <activity
             android:name=".activities.PhetchActivity"
-            android:label="@string/title_activity_phetch" >
-        </activity>
+            android:label="@string/title_activity_phetch" />
         <activity
             android:name=".activities.LoginActivity"
-            android:label="@string/title_activity_login" >
-        </activity>
+            android:label="@string/title_activity_login" />
         <activity
             android:name=".activities.AuthenticationTestActivity"
-            android:label="@string/title_activity_authentication_test" >
-        </activity>
+            android:label="@string/title_activity_authentication_test" />
         <activity
             android:name=".activities.CheckoutActivity"
-            android:label="@string/title_activity_checkout" >
-        </activity>
+            android:label="@string/title_activity_checkout" />
         <activity
             android:name=".activities.DimensionRevealActivity"
-            android:label="@string/title_activity_dimension_reveal" >
-        </activity>
+            android:label="@string/title_activity_dimension_reveal" />
         <activity
             android:name=".activities.PagerActivity"
-            android:label="@string/title_activity_pager" >
-        </activity>
+            android:label="@string/title_activity_pager" />
         <activity
             android:name=".activities.GlideActivity"
-            android:label="@string/title_activity_glide" >
-        </activity>
+            android:label="@string/title_activity_glide" />
         <activity
             android:name=".activities.PicassoActivity"
-            android:label="@string/title_activity_picasso" >
-        </activity>
+            android:label="@string/title_activity_picasso" />
         <activity
             android:name=".activities.DataBindingActivity"
-            android:label="@string/title_activity_data_binding" >
-        </activity>
+            android:label="@string/title_activity_data_binding" />
         <activity
             android:name=".activities.AdcNotificationActivity"
-            android:label="@string/title_activity_adc_notification" >
-        </activity>
+            android:label="@string/title_activity_adc_notification" />
         <activity
             android:name=".activities.P2pNsdActivity"
-            android:label="@string/title_activity_p2p_nsd" >
-        </activity>
+            android:label="@string/title_activity_p2p_nsd" />
         <activity
             android:name=".activities.NsdActivity"
-            android:label="@string/title_activity_nsd" >
-        </activity>
+            android:label="@string/title_activity_nsd" />
         <activity
             android:name=".activities.BluetoothActivity"
-            android:label="@string/title_activity_bluetooth" >
-        </activity>
+            android:label="@string/title_activity_bluetooth" />
         <activity
             android:name=".activities.NearbyBeaconActivity"
-            android:label="@string/title_activity_nearby_beacon" >
-        </activity>
+            android:label="@string/title_activity_nearby_beacon" />
         <activity
             android:name=".activities.NfcActivity"
-            android:label="@string/title_activity_nfc" >
+            android:label="@string/title_activity_nfc">
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
 
@@ -374,49 +313,57 @@
         </activity>
         <activity
             android:name=".activities.BackgroundActivity"
-            android:label="@string/title_activity_background" >
-        </activity>
+            android:label="@string/title_activity_background" />
         <activity
             android:name=".activities.MenuActivity"
-            android:label="@string/title_activity_menu" >
-        </activity>
-        <activity android:name=".activities.RainActivity" >
-        </activity>
-        <activity android:name=".activities.AndroidPayActivity" >
-        </activity>
-        <activity android:name=".activities.AndroidPayConfirmationActivity" >
-        </activity>
-        <activity android:name=".activities.AndroidPayCompleteActivity" >
-        </activity>
+            android:label="@string/title_activity_menu" />
+        <activity android:name=".activities.RainActivity" />
+        <activity android:name=".activities.AndroidPayActivity" />
+        <activity android:name=".activities.AndroidPayConfirmationActivity" />
+        <activity android:name=".activities.AndroidPayCompleteActivity" />
         <activity
             android:name=".activities.SmartLockActivity"
             android:label="@string/title_activity_smart_lock"
-            android:theme="@style/MyTheme" >
-        </activity>
+            android:theme="@style/MyTheme" />
         <activity
             android:name=".activities.FingerPrintActivity"
             android:label="@string/title_activity_finger_print"
-            android:theme="@style/MyTheme" >
-        </activity>
-        <activity android:name=".activities.RulerActivity" >
-        </activity>
-        <activity android:name=".fireworks.FireworksActivity" >
-        </activity>
-        <activity android:name=".fireworks.FireWorks2Activity" >
-        </activity>
-        <activity android:name=".activities.ChronometerActivity" >
-        </activity>
+            android:theme="@style/MyTheme" />
+        <activity android:name=".activities.RulerActivity" />
+        <activity android:name=".fireworks.FireworksActivity" />
+        <activity android:name=".fireworks.FireWorks2Activity" />
+        <activity android:name=".activities.ChronometerActivity" />
         <activity
             android:name=".activities.UberActivity"
             android:label="@string/title_activity_uber"
-            android:theme="@style/MyTheme" >
-        </activity>
-        <activity android:name=".activities.EddystoneActivity" >
+            android:theme="@style/MyTheme" />
+        <activity android:name=".activities.EddystoneActivity" />
+        <activity
+            android:name="com.branchmetrics.Main2Activity"
+            android:label="@string/title_activity_main2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.branchmetrics.Branch2Activity">
+            <intent-filter>
+                <data
+                    android:host="customer"
+                    android:scheme="branch" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.ViewPagerActivity" />
+        <activity
+            android:name=".activities.BlankActivity"
+            android:label="@string/title_activity_blank"
+            android:theme="@style/MyTheme"></activity>
     </application>
 
 </manifest>
