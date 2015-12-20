@@ -17,8 +17,6 @@ public class RecyclerViewActivity extends Activity {
     @InjectView(R.id.rv)
     RecyclerView mRv;
 
-    private RecyclerView.LayoutManager mLayoutManager;
-    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,11 +27,7 @@ public class RecyclerViewActivity extends Activity {
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
         mRv.setHasFixedSize(true);
-
-        // use a linear layout manager
-        mLayoutManager = new LinearLayoutManager(this);
-
-        mRv.setLayoutManager(mLayoutManager);
+        mRv.setLayoutManager(new LinearLayoutManager(this));
 
         // specify an adapter (see also next example)
         String[] myDataset = {"This", "Is", "A", "Test"};

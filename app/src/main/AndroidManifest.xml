@@ -114,7 +114,12 @@
             android:label="@string/title_activity_circular" />
         <activity
             android:name=".activities.RecyclerViewActivity"
-            android:label="@string/title_activity_cards" />
+            android:label="@string/title_activity_cards" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activities.RetrofitActivity"
             android:label="@string/title_activity_retrofit" />
@@ -358,10 +363,6 @@
             android:name=".activities.ViewPagerActivity"
             android:label="@string/title_activity_view_pager"
             android:theme="@style/MyTheme.NoActionBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
