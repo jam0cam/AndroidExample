@@ -114,12 +114,7 @@
             android:label="@string/title_activity_circular" />
         <activity
             android:name=".activities.RecyclerViewActivity"
-            android:label="@string/title_activity_cards" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:label="@string/title_activity_cards"></activity>
         <activity
             android:name=".activities.RetrofitActivity"
             android:label="@string/title_activity_retrofit" />
@@ -182,7 +177,8 @@
             android:label="@string/title_activity_image" />
         <activity
             android:name=".activities.MultipleListViewActivity"
-            android:label="@string/title_activity_multiple_list_view" />
+            android:label="@string/title_activity_multiple_list_view">
+        </activity>
         <activity
             android:name=".activities.AlarmActivity"
             android:label="@string/title_activity_alarm" />
@@ -345,8 +341,7 @@
         <activity android:name=".activities.EddystoneActivity" />
         <activity
             android:name="com.branchmetrics.Main2Activity"
-            android:label="@string/title_activity_main2">
-        </activity>
+            android:label="@string/title_activity_main2"></activity>
         <activity android:name="com.branchmetrics.Branch2Activity">
             <intent-filter>
                 <data
@@ -362,7 +357,13 @@
         <activity
             android:name=".activities.ViewPagerActivity"
             android:label="@string/title_activity_view_pager"
-            android:theme="@style/MyTheme.NoActionBar" >
+            android:theme="@style/MyTheme.NoActionBar"></activity>
+
+        <activity android:name=".activities.ListViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
