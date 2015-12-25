@@ -4,56 +4,18 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context="com.jitse.example.activities.ImageActivity">
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:src="@drawable/roy"
-            android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Roy"
-            />
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:src="@drawable/doug"
-            android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:src="@drawable/matt"
-            android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
-            />
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:src="@drawable/mike"
-            android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
-            />
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/image_view1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
-
+    <ImageView
+        android:id="@+id/image_view2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 </LinearLayout>

@@ -114,7 +114,7 @@
             android:label="@string/title_activity_circular" />
         <activity
             android:name=".activities.RecyclerViewActivity"
-            android:label="@string/title_activity_cards"></activity>
+            android:label="@string/title_activity_cards" />
         <activity
             android:name=".activities.RetrofitActivity"
             android:label="@string/title_activity_retrofit" />
@@ -174,11 +174,15 @@
             android:label="@string/title_activity_fragment_reveal" />
         <activity
             android:name=".activities.ImageActivity"
-            android:label="@string/title_activity_image" />
+            android:label="@string/title_activity_image" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activities.MultipleListViewActivity"
-            android:label="@string/title_activity_multiple_list_view">
-        </activity>
+            android:label="@string/title_activity_multiple_list_view"></activity>
         <activity
             android:name=".activities.AlarmActivity"
             android:label="@string/title_activity_alarm" />
@@ -341,7 +345,7 @@
         <activity android:name=".activities.EddystoneActivity" />
         <activity
             android:name="com.branchmetrics.Main2Activity"
-            android:label="@string/title_activity_main2"></activity>
+            android:label="@string/title_activity_main2" />
         <activity android:name="com.branchmetrics.Branch2Activity">
             <intent-filter>
                 <data
@@ -357,13 +361,10 @@
         <activity
             android:name=".activities.ViewPagerActivity"
             android:label="@string/title_activity_view_pager"
-            android:theme="@style/MyTheme.NoActionBar"></activity>
-
+            android:theme="@style/MyTheme.NoActionBar" />
         <activity android:name=".activities.ListViewActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        </activity>
+        <activity android:name=".activities.SixPmProductActivity">
         </activity>
     </application>
 

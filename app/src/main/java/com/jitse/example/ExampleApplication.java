@@ -7,6 +7,7 @@ import com.jitse.example.retrofit.BrandService;
 import com.jitse.example.retrofit.PhetchService;
 import com.jitse.example.retrofit.ProductService;
 import com.jitse.example.retrofit.SearchService;
+import com.jitse.example.retrofit.SixPmService;
 import com.twitter.sdk.android.Twitter;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
 
@@ -39,11 +40,14 @@ public class ExampleApplication extends Application {
     public static String MAFIA_API = "https://mafia.integ.amazon.com/";
     public static String PHETCH_API = "http://phetch.elasticbeanstalk.com/";
     private static final String KEY = "5ca1aa6b9151f729f5b7f05b14dba5ff8aedb975";
+    public static final String SIX_PM = "https://secure-www.6pm.com";
+
     BrandService mBrandService;
 
     SearchService mSearchService;
     ProductService mProductService;
     PhetchService mPhetchService;
+    SixPmService mSixService;
 
     public Bitmap mBitmap;
 
@@ -118,9 +122,16 @@ public class ExampleApplication extends Application {
                 .setEndpoint(PHETCH_API)
                 .build();
 
+        RestAdapter sixAdapter = new RestAdapter.Builder()
+                .setEndpoint(SIX_PM)
+                .build();
+
+
         mSearchService = mafiaRestAdapter.create(SearchService.class);
         mProductService = zapposRestAdapter.create(ProductService.class);
         mPhetchService = phetchRestAdapter.create(PhetchService.class);
+        mSixService = sixAdapter.create(SixPmService.class);
+
     }
 
     public BrandService getBrandService() {
@@ -137,5 +148,9 @@ public class ExampleApplication extends Application {
 
     public PhetchService getPhetchService() {
         return mPhetchService;
+    }
+
+    public SixPmService getSixService() {
+        return mSixService;
     }
 }

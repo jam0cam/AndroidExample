@@ -1,40 +1,47 @@
 package com.jitse.example.activities;
 
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.jitse.example.R;
+import com.squareup.picasso.Picasso;
 
-public class ImageActivity extends ActionBarActivity {
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+
+public class ImageActivity extends AppCompatActivity {
+
+    private static final String TAG = ImageActivity.class.getName();
+
+    @InjectView(R.id.image_view1)
+    ImageView mImageView1;
+
+    @InjectView(R.id.image_view2)
+    ImageView mImageView2;
+
+    String mUrl = "http://www.6pm.com/images/z/3/4/8/8/1/4/3488140-p-MULTIVIEW.jpg";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image);
-    }
+        ButterKnife.inject(this);
+
+        Picasso.with(this)
+                .load(mUrl)
+                .into(mImageView1);
+
+        Glide.with(this)
+                .load(mUrl)
+                .into(mImageView2);
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_image, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }
