@@ -10,6 +10,7 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.jitse.example.activities.BeaconMonitoringActivity;
+import com.jitse.example.event.BeaconEvent;
 
 import org.altbeacon.beacon.BeaconManager;
 import org.altbeacon.beacon.BeaconParser;
@@ -19,6 +20,8 @@ import org.altbeacon.beacon.powersave.BackgroundPowerSaver;
 import org.altbeacon.beacon.startup.BootstrapNotifier;
 import org.altbeacon.beacon.startup.RegionBootstrap;
 
+import de.greenrobot.event.EventBus;
+
 /**
  * Created by jitse on 12/25/15.
  */
@@ -26,8 +29,6 @@ public class BeaconApplication extends Application implements BootstrapNotifier 
     private static final String TAG = BeaconApplication.class.getName();
     private RegionBootstrap regionBootstrap;
     private BackgroundPowerSaver backgroundPowerSaver;
-    private BeaconMonitoringActivity beaconMonitoringActivity = null;
-
 
     public void onCreate() {
         super.onCreate();
@@ -67,32 +68,18 @@ public class BeaconApplication extends Application implements BootstrapNotifier 
     public void didEnterRegion(Region arg0) {
         // In this example, this class sends a notification to the user whenever a Beacon
         // matching a Region (defined above) are first seen.
-        Log.d(TAG, "did enter region.");
-        if (beaconMonitoringActivity != null) {
-            // If the Monitoring Activity is visible, we log info about the beacons we have
-            // seen on its display
-            beaconMonitoringActivity.logToDisplay("I see a beacon again");
-        } else {
-            // If we have already seen beacons before, but the monitoring activity is not in
-            // the foreground, we send a notification to the user on subsequent detections.
-            Log.d(TAG, "Sending notification.");
-            sendNotification();
-        }
+        Log.d(TAG, "did enter region. Posting event");
+        EventBus.getDefault().postSticky(new BeaconEvent(true));
     }
 
     @Override
     public void didExitRegion(Region region) {
-        Log.d(TAG, "did exit region.");
-        if (beaconMonitoringActivity != null) {
-            beaconMonitoringActivity.logToDisplay("I no longer see a beacon.");
-        }
+        Log.d(TAG, "did exit region. Posting event");
+        EventBus.getDefault().postSticky(new BeaconEvent(false));
     }
 
     @Override
     public void didDetermineStateForRegion(int state, Region region) {
-        if (beaconMonitoringActivity != null) {
-            beaconMonitoringActivity.logToDisplay("I have just switched from seeing/not seeing beacons: " + state);
-        }
     }
 
     private void sendNotification() {
@@ -114,9 +101,4 @@ public class BeaconApplication extends Application implements BootstrapNotifier 
                 (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.notify(1, builder.build());
     }
-
-    public void setBeaconMonitoringActivity(BeaconMonitoringActivity activity) {
-        this.beaconMonitoringActivity = activity;
-    }
-
 }

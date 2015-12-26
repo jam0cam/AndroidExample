@@ -42,7 +42,7 @@
         android:required="true" />
 
     <application
-        android:name=".ExampleApplication"
+        android:name=".BeaconApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@drawable/ic_launcher"
