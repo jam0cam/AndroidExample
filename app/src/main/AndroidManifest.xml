@@ -68,6 +68,8 @@
         <service
             android:name=".service.MyService"
             android:label="MyService" />
+        <service android:name=".service.BeaconService"
+            android:label="BeaconService" />
         <service
             android:name=".daydream.MyDream"
             android:exported="true"
@@ -174,15 +176,10 @@
             android:label="@string/title_activity_fragment_reveal" />
         <activity
             android:name=".activities.ImageActivity"
-            android:label="@string/title_activity_image" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:label="@string/title_activity_image"></activity>
         <activity
             android:name=".activities.MultipleListViewActivity"
-            android:label="@string/title_activity_multiple_list_view"></activity>
+            android:label="@string/title_activity_multiple_list_view" />
         <activity
             android:name=".activities.AlarmActivity"
             android:label="@string/title_activity_alarm" />
@@ -223,7 +220,8 @@
             android:label="@string/title_activity_immersive" />
         <activity
             android:name=".activities.TestActivity"
-            android:label="@string/title_activity_test" />
+            android:label="@string/title_activity_test" >
+        </activity>
         <activity
             android:name=".activities.SimpleSceneTransitionActivity"
             android:label="@string/title_activity_scene_transition" />
@@ -342,7 +340,8 @@
             android:name=".activities.UberActivity"
             android:label="@string/title_activity_uber"
             android:theme="@style/MyTheme" />
-        <activity android:name=".activities.EddystoneActivity" />
+        <activity android:name=".activities.EddystoneActivity">
+        </activity>
         <activity
             android:name="com.branchmetrics.Main2Activity"
             android:label="@string/title_activity_main2" />
@@ -362,9 +361,14 @@
             android:name=".activities.ViewPagerActivity"
             android:label="@string/title_activity_view_pager"
             android:theme="@style/MyTheme.NoActionBar" />
-        <activity android:name=".activities.ListViewActivity">
-        </activity>
-        <activity android:name=".activities.SixPmProductActivity">
+        <activity android:name=".activities.ListViewActivity"></activity>
+        <activity android:name=".activities.SixPmProductActivity"></activity>
+
+        <activity android:name=".activities.BeaconMonitoringActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
