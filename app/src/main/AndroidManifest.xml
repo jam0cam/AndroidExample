@@ -221,7 +221,7 @@
             android:label="@string/title_activity_immersive" />
         <activity
             android:name=".activities.TestActivity"
-            android:label="@string/title_activity_test"></activity>
+            android:label="@string/title_activity_test" />
         <activity
             android:name=".activities.SimpleSceneTransitionActivity"
             android:label="@string/title_activity_scene_transition" />
@@ -340,7 +340,7 @@
             android:name=".activities.UberActivity"
             android:label="@string/title_activity_uber"
             android:theme="@style/MyTheme" />
-        <activity android:name=".activities.EddystoneActivity"></activity>
+        <activity android:name=".activities.EddystoneActivity" />
         <activity
             android:name="com.branchmetrics.Main2Activity"
             android:label="@string/title_activity_main2" />
@@ -362,9 +362,10 @@
             android:theme="@style/MyTheme.NoActionBar" />
         <activity android:name=".activities.ListViewActivity" />
         <activity android:name=".activities.SixPmProductActivity" />
-        <activity android:name=".activities.BeaconMonitoringActivity">
-        </activity>
+        <activity android:name=".activities.BeaconMonitoringActivity"></activity>
         <activity android:name=".activities.EventBusActivity">
+        </activity>
+        <activity android:name=".activities.HandlerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
