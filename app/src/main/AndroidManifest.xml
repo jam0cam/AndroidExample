@@ -362,10 +362,11 @@
             android:theme="@style/MyTheme.NoActionBar" />
         <activity android:name=".activities.ListViewActivity" />
         <activity android:name=".activities.SixPmProductActivity" />
-        <activity android:name=".activities.BeaconMonitoringActivity"></activity>
-        <activity android:name=".activities.EventBusActivity">
-        </activity>
+        <activity android:name=".activities.BeaconMonitoringActivity" />
+        <activity android:name=".activities.EventBusActivity"></activity>
         <activity android:name=".activities.HandlerActivity">
+        </activity>
+        <activity android:name=".activities.VoiceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
