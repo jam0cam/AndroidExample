@@ -76,3 +76,9 @@ dependencies {
     compile 'com.mparticle:android-branch-kit:4.+'
     compile 'com.mparticle:android-core:4.+'
 }
+
+
+
+ant.importBuild 'assets.xml'
+preBuild.dependsOn(list, checksum)
+clean.dependsOn(clean_assets)
